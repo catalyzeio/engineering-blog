@@ -1,0 +1,79 @@
+@media handheld, only screen and (max-width: 1321px){
+	.main-left{
+		.main-header{
+			.tag{
+				margin-top: 13px;
+				max-width: 150px;
+			}
+		}
+		nav{
+			position: relative;
+			width: 100%;
+			a{
+				display: block;
+				margin: 0px 0px 10px 0px;
+				padding: 0px 0px 10px 0px;
+				border-bottom: 1px dotted rgba(255,255,255,0.3);
+			}
+		}
+	}
+}
+@media handheld, only screen and (max-width: 1100px){
+	.main-left{
+		.main-header{.tag{display: none;visibility: hidden;}}
+	}
+}
+@media handheld, only screen and (max-width: 951px){
+	.popular-posts{display: none;visibility: hidden;}
+}
+@media handheld, only screen and (max-width: 911px){
+	.main-left{
+		.main-header{padding: 10px;.logo{max-width: 95px;}}
+		nav{padding: 10px;}
+	}
+	.intro{
+		margin: 10px;
+		padding: 10px;
+		p{font-size: 12px;}
+	}
+}
+@media handheld, only screen and (max-width: 767px){
+	.grid{
+		width: 100%;
+		min-width: 0;
+		margin-left: 0px;
+		margin-right: 0px;
+		padding-left: 0px;
+		padding-right: 0px;
+	}
+	[class*='col-']{
+		width: auto;
+		float: none;
+		margin-left: 0px;
+		margin-right: 0px;
+		margin-top: 10px;
+		margin-bottom: 10px;
+		padding-left: 20px;
+		padding-right: 20px;
+	}
+}
+@media handheld, only screen and (max-width: 601px){
+	.main-posts{
+		.post{
+			h1.title{font-size: 25px;}
+			.meta{
+				.tags{float: none;}
+				.date{float: none;padding: 20px 0px 0px 0px;}
+			}
+		}
+	}
+}
+@media handheld, only screen and (max-width: 521px){
+	.main-posts{padding: 10px;width: 100%;margin-left: 0px;}
+	.main-left{
+		position: relative;
+		width: 100%;
+		min-width: 100%;
+		max-width: 100%;
+	}
+}

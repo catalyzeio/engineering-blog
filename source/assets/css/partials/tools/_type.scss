@@ -1,0 +1,20 @@
+@import url(//fonts.googleapis.com/css?family=Inconsolata:400,700);
+$f_sans-mono: 'Inconsolata', monospace;
+$f_sans-bu:'AvenirNextLTW01-Regular','Avenir Next','Helvetica Neue', sans-serif;
+$f_sans-xlight:'AvenirNextLTW01-UltraLi', $f_sans-bu;
+$f_sans-xlight-alt:'AvenirNextLTW01-UltraLt_721260', $f_sans-bu;
+$f_sans-thin:'Avenir Next W01 Thin', $f_sans-bu;
+$f_sans-thin-ital:'AvenirNextW01-ThinItali', $f_sans-bu;
+$f_sans-light:'Avenir Next W01 Light', $f_sans-bu;
+$f_sans-light-ital:'AvenirNextW01-LightItal', $f_sans-bu;
+$f_sans-reg:'AvenirNextLTW01-Regular', $f_sans-bu;
+$f_sans-ital:'AvenirNextLTW01-Italic', $f_sans-bu;
+$f_sans-med:'AvenirNextLTW01-Medium', $f_sans-bu;
+$f_sans-med-ital:'AvenirNextLTW01-MediumI_721278', $f_sans-bu;
+$f_sans-dem:'Avenir Next LT W01 Demi', $f_sans-bu;
+$f_sans-dem-ital:'AvenirNextLTW01-DemiIta', $f_sans-bu;
+$f_sans-bold:'Avenir Next LT W01 Bold', $f_sans-bu;
+$f_sans-bold-ital:'AvenirNextLTW01-BoldIta', $f_sans-bu;
+$f_sans-heavy:'AvenirNextLTW01-Heavy', $f_sans-bu;
+$f_sans-heavy-ital:'AvenirNextLTW01-HeavyIt_721290', $f_sans-bu;
+body{font-family: $f_sans-reg;font-size:14px;}

@@ -1,0 +1,44 @@
+.main-posts{
+	margin-left: 30%;
+	padding: 30px;
+	.post{
+		img{max-width: 100%;padding: 0px 0px 20px 0px;display: block;}
+		h1.title{
+			font-size: 35px;
+			font-family: $f_sans-mono;
+			color: $c_brand;
+			line-height: 1.5;
+			padding: 0px 0px 20px 0px;
+		}
+		p{
+			padding: 0px 0px 20px 0px;
+			font-family: $f_sans-reg;
+			color: $c_text;
+			line-height: 2;
+		}
+		max-width: 650px;
+	}
+	.meta{
+		@extend .cf;
+		padding: 0px 0px 20px 0px;
+		margin: 0px 0px 20px 0px;
+		border-bottom: 1px solid #ddd;
+		.tags{
+			float: left;
+			li{
+				padding: 5px 10px;
+				border: 1px solid $c_brand;
+				@include border-radius(5px);
+				display: inline-block;
+				color: $c_brand;
+				margin: 0px 10px 0px 0px;
+				&:last-of-type{margin: 0px 0px 0px 0px;}
+			}
+		}
+		.date{
+			color: $c_text;
+			float: right;
+			padding: 5px;
+		}
+	}
+}

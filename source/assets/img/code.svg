@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="2440px" height="1233px" viewBox="0 0 2440 1233" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:sketch="http://www.bohemiancoding.com/sketch/ns">
+    <!-- Generator: Sketch 3.3.3 (12072) - http://www.bohemiancoding.com/sketch -->
+    <title>01010010001110101010</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="80.1259566%" id="linearGradient-1">
+            <stop stop-color="#232E52" offset="0%"></stop>
+            <stop stop-color="#232E52" stop-opacity="0" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
+        <text id="01010010001110101010" fill="url(#linearGradient-1)" sketch:type="MSTextLayer" font-family="Inconsolata" font-size="100" font-weight="normal" line-spacing="200">
+            <tspan x="-5" y="63" fill="#232E53">0101001000111010101010100100011101010101010010001</tspan>
+            <tspan x="-5" y="263" fill="#232E53">1101010101010010001110101010101001000111010101010</tspan>
+            <tspan x="-5" y="463" fill="#232E53">1001000111010101010100100011101010101010010001110</tspan>
+            <tspan x="-5" y="663" fill="#232E53">1010101010010001110101010101001000111010101010100</tspan>
+            <tspan x="-5" y="863" fill="#232E53">1000111010101010100100011101010101010010001110101</tspan>
+            <tspan x="-5" y="1063" fill="#232E53">0101010010001110101010101001000111010101010100100</tspan>
+            <tspan x="-5" y="1263" fill="#232E53">0111010101010100100011101010101010010001110101010</tspan>
+            <tspan x="-5" y="1463" fill="#232E53">1010010001110101010101001000111010101010100100011</tspan>
+        </text>
+    </g>
+</svg>
