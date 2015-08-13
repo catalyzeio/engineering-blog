@@ -1,5 +1,7 @@
 # Catalyze Engineering Blog
 
+![status](https://codeship.com/projects/47c697e0-2408-0133-22b1-2235479d6523/status?branch=master)
+
 ![Cover Image](http://i.imgur.com/7U90qCR.png)
 
 ### Prerequisites
@@ -18,4 +20,4 @@
 
 ### Deploy
 
-TODO.
+TODO
