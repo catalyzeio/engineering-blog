@@ -12,4 +12,4 @@ gem "middleman-syntax"
 
 gem "middleman-search_engine_sitemap"
 
-gem "nokogiri"
+gem "nokogiri", "~> 1.6.3.1"
