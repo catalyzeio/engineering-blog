@@ -4,9 +4,7 @@
 		<div class="tag"><img src="/assets/img/tag.png"></div>
 	</header>
 	<div class="intro">
-		<p>
-			<%= current_page.data.sum %>
-		</p>
+		<p><%= current_page.data.sum %></p>
 	</div>
 	<div class="popular-posts">
 		<h1><i class="fa fa-eye"></i> Read More Articles</h1>
@@ -23,16 +21,3 @@
 		<a href="//catalyze.io/about">Catalyze</a>
 	</nav>
 </div>
-<!-- Give me an article to read -->
-<% prev_article = current_article.previous_article %>
-<% if prev_article %>
-	<a class="button-more" href="<%= prev_article.url %>" rel="prev" title="Previous article: <%= prev_article.title %>">
-		<i class="fa fa-chevron-right"></i> <%= prev_article.title %>
-	</a>
-<% end %>
-<% next_article = current_article.next_article %>
-<% if next_article %>
-	<a class="button-more" href="<%= next_article.url %>" rel="next" title="Next article: <%= next_article.title %>">
-		<i class="fa fa-chevron-right"></i> <%= next_article.title %>
-	</a>
-<% end %>

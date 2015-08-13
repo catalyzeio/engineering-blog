@@ -52,6 +52,19 @@
 				<%= yield %>
 			</div>
 		</div>
+		<!-- Give me an article to read -->
+		<% prev_article = current_article.previous_article %>
+		<% if prev_article %>
+			<a class="button-more" href="<%= prev_article.url %>" rel="prev" title="Previous article: <%= prev_article.title %>">
+				<i class="fa fa-chevron-right"></i> <%= prev_article.title %>
+			</a>
+		<% end %>
+		<% next_article = current_article.next_article %>
+		<% if next_article %>
+			<a class="button-more" href="<%= next_article.url %>" rel="next" title="Next article: <%= next_article.title %>">
+				<i class="fa fa-chevron-right"></i> <%= next_article.title %>
+			</a>
+		<% end %>
 		<%= javascript_include_tag "//fast.fonts.net/jsapi/06d49100-622b-4a4b-9a27-92dce71d35c3.js", "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
 	</body>
 </html>
