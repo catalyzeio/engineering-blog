@@ -28,17 +28,34 @@
 		<div class="main-posts">
 			<% blog.articles[0...2].each do |article| %>
 			<div class="post">
-				<h1 class="title"><%= article.title %></h1>
-				<div class="meta">
-					<ul class="tags">
-						<li><%= article.data.tags %></li>
-					</ul>
-					<div class="date"><%= article.data.date %></div>
-				</div>
+				<header>
+					<h1 class="title">
+					<a href="<%= article.url %>">
+						<%= article.title %>
+					</a>
+					</h1>
+					<div class="meta">
+						<ul class="tags">
+							<li><%= article.data.tags %></li>
+						</ul>
+						<div class="date"><%= article.data.date %></div>
+					</div>
+					<div class="author">
+						<div class="prof">
+							<img src="/assets/img/profiles/prof-<%= article.data.author %>.png">
+							<span class="main">
+								<%= article.data.author_full %>
+							</span>
+						</div>
+						<span class="guest">
+							<span id="guest-author"><%= article.data.author_alt %></span>
+						</span>
+					</div>
+				</header>
 				<%= article.summary %>
 			</div>
 			<% end %>
 		</div>
-		<%= javascript_include_tag "//fast.fonts.net/jsapi/06d49100-622b-4a4b-9a27-92dce71d35c3.js", "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
+		<%= javascript_include_tag "//fast.fonts.net/jsapi/06d49100-622b-4a4b-9a27-92dce71d35c3.js", "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
 	</body>
 </html>

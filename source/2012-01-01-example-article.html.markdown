@@ -2,6 +2,9 @@
 title: Example Article
 date: 2012-01-01
 tags: example
+author: ryan
+author_full: Ryan S. Rich
+author_alt: Guest - Someone Else
 ---
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ante dui, maximus a iaculis et, varius eget elit. Proin vestibulum nulla non tellus dictum, non dignissim quam luctus. Sed convallis dolor sit amet erat molestie, eget sollicitudin nunc rutrum. Praesent tincidunt quam ante, sit amet tincidunt lacus dignissim vitae. Proin non ullamcorper nunc, vitae vulputate lectus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec faucibus odio quis magna sollicitudin, dictum laoreet velit convallis. Suspendisse quis ligula id diam commodo faucibus eget et nisi. Curabitur pulvinar placerat lacus et porta. Etiam fermentum augue eget dolor gravida, quis tempus sapien luctus. Phasellus imperdiet lacinia sapien non luctus. Fusce at tempor dui. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus.

@@ -1,14 +1,29 @@
 .main-posts{
 	margin-left: 30%;
 	padding: 30px;
+	header{
+		@extend .cf;
+		margin: 0px 0px 20px 0px;
+	}
 	.post{
+		border-bottom: 1px dotted #ddd;
+		margin-bottom: 20px;
 		img{max-width: 100%;padding: 0px 0px 20px 0px;display: block;}
 		h1.title{
-			font-size: 35px;
-			font-family: $f_sans-mono;
-			color: $c_brand;
-			line-height: 1.5;
-			padding: 0px 0px 20px 0px;
+			a{
+				font-size: 35px;
+				font-family: $f_sans-mono;
+				color: $c_brand;
+				line-height: 1.5;
+				text-decoration: none;
+				padding: 0px 0px 20px 0px;
+				display: block;
+				@include easing(350ms);
+				&:hover{
+					@include easing(350ms);
+					color: darken($c_eng-brand, 20%);
+				}
+			}
 		}
 		p{
 			padding: 0px 0px 20px 0px;
@@ -16,13 +31,10 @@
 			color: $c_text;
 			line-height: 2;
 		}
-		max-width: 650px;
+		max-width: 750px;
 	}
 	.meta{
 		@extend .cf;
-		padding: 0px 0px 20px 0px;
-		margin: 0px 0px 20px 0px;
-		border-bottom: 1px solid #ddd;
 		.tags{
 			float: left;
 			li{
@@ -39,6 +51,45 @@
 			color: $c_text;
 			float: right;
 			padding: 5px;
+		}
+	}
+	.author{
+		background-color: #f4f4f4;
+		border: 1px solid #ddd;
+		padding: 10px;
+		margin: 20px 0px 0px 0px;
+		@include border-radius(5px);
+		width: 100%;
+		@extend .cf;
+		.prof{
+			float: left;
+			display: block;
+			position: relative;
+			width: 50%;
+			img{
+				padding: 0px;
+				height: auto;
+				max-width: 50px;
+				@include border-radius(25px);
+				display: block;
+				width: 100%;
+			}
+			span.main{
+				left: 60px;
+				top: 20px;
+				display: block;
+				position: absolute;
+				font-family: $f_sans-med;
+				color: $c_text;
+			}
+		}
+		span.guest{
+			margin: 20px 0px 0px 0px;
+			float: right;
+			display: block;
+			font-family: $f_sans-med;
+			color: $c_text;
+			span#guest-author{font-family: $f_sans-ital;}
 		}
 	}
 }
