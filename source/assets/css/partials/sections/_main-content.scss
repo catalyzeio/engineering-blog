@@ -77,6 +77,19 @@
 				&:last-of-type{margin: 0px 0px 0px 0px;}
 			}
 		}
+		table{
+			border: 1px solid #ddd;
+			margin: 0px 0px 20px 0px;
+			tr{
+				td,th{
+					text-align: left;
+					background-color: #f4f4f4;
+					border: 1px solid #ddd;
+					padding: 10px;
+				}
+				td{background-color: #fff;}
+			}
+		}
 	}
 	.meta{
 		@extend .cf;
@@ -162,5 +175,16 @@
 		@include easing(350ms);
 		padding-left: 15px;
 		color: $c_code;
+	}
+}
+.alert-success{
+	border: 1px solid #67A842;
+	background-color: #E8FFDB;
+	padding: 10px;
+	margin: 20px;
+	@include border-radius(5px);
+	p{
+		line-height: 1.5;
+		color: #5D9B3A;
 	}
 }
