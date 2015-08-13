@@ -24,7 +24,34 @@
 		<%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 	</head>
 	<body class="<%= page_classes %>">
-		<%= yield %>
+		<%= partial "partials/blog-left" %>
+		<div class="main-posts">
+			<div class="post">
+				<header>
+					<h1 class="title">
+						<%= current_page.data.title %>
+					</h1>
+					<div class="meta">
+						<ul class="tags">
+							<li><%= current_page.data.tags %></li>
+						</ul>
+						<div class="date"><%= current_page.data.date %></div>
+					</div>
+					<div class="author">
+						<div class="prof">
+							<img src="/assets/img/profiles/prof-<%= current_page.data.author %>.png">
+							<span class="main">
+								<%= current_page.data.author_full %>
+							</span>
+						</div>
+						<span class="guest">
+							<span id="guest-author"><%= current_page.data.author_alt %></span>
+						</span>
+					</div>
+				</header>
+				<%= yield %>
+			</div>
+		</div>
 		<%= javascript_include_tag "//fast.fonts.net/jsapi/06d49100-622b-4a4b-9a27-92dce71d35c3.js", "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
 	</body>
 </html>

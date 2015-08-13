@@ -1,6 +1,6 @@
 <div class="main-left">
 	<header class="main-header">
-		<div class="logo"><img src="/assets/img/logo.png"></div>
+		<a href="/#/"><div class="logo"><img src="/assets/img/logo.png"></div></a>
 		<div class="tag"><img src="/assets/img/tag.png"></div>
 	</header>
 	<div class="intro">
@@ -9,12 +9,11 @@
 		</p>
 	</div>
 	<div class="popular-posts">
-		<h1><i class="fa fa-eye"></i> Some of our more popular posts</h1>
+		<h1><i class="fa fa-eye"></i> Read More Articles</h1>
 		<ul>
-			<li><a href="#">Something super popular and stuffs</a></li>
-			<li><a href="#">Something super popular and stuffs</a></li>
-			<li><a href="#">Something super popular and stuffs</a></li>
-			<li><a href="#">Something super popular and stuffs</a></li>
+			<% blog.articles[0...5].each do |article| %>
+			<li><a href="<%= article.url %>"><%= article.title %></a></li>
+			<% end %>
 		</ul>
 	</div>
 	<nav>
