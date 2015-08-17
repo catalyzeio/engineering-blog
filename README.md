@@ -18,6 +18,10 @@
 - Run the server, `rake run`
 - View the site locally, `http://localhost:2113`
 
-### Deploy
+### Writing Guide
 
-Testing
+TODO
+
+### Publishing
+
+Publishing is handled by Codeship. Any push to master results in a deployment to the blog server.
