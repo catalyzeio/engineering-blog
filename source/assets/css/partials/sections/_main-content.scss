@@ -63,6 +63,7 @@
 		h2{font-size: 18px;}
 		h3{font-size: 16px;}
 		h4{font-size: 14px;text-transform: uppercase;}
+		ol,
 		ul{
 			padding: 20px 0px 20px 20px;
 			border-top: 1px dotted #ddd;
@@ -186,5 +187,28 @@
 	p{
 		line-height: 1.5;
 		color: #5D9B3A;
+	}
+}
+.archives-posts{
+	@extend .main-posts;
+	.post{
+		header{padding: 0px;margin: 0px;}
+		padding: 10px;
+		background-color: #fff;
+		@include border-radius(5px);
+		border: 1px solid #ddd;
+		@include box-shadow(0px 0px 10px #ddd);
+		h1.title{
+			font-size: 20px;
+			padding: 0px 0px 0px 0px;
+			a{
+				font-size: 20px;
+				padding: 0px 0px 10px 0px;
+			}
+		}
+		.block-level-link{
+			display: block;
+			@extend .cf;
+		}
 	}
 }
