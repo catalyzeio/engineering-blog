@@ -37,14 +37,14 @@ Posts can include media such as images, video and audio.
 _Once you have the repository cloned, have pulled/checked out `master` and running locally you'll want to create a new branch for your post:_
 
 ```
-$ git branch draft-<lastname>
-$ git checkout draft-<lastname>
+$ git branch d-<topic>-<lastname>
+$ git checkout d-<topic>-<lastname>
 ```
 
 If you have two drafts going at once you'd simply add a number after `draft`:
 
 ```
-$ git branch draft2-<lastname>
+$ git branch d2-<topic>-<lastname>
 ```
 
 #### 2. Write your post with proper file name and frontmatter
@@ -87,7 +87,7 @@ Once you've written your post, named the file correctly, and filled in all front
 ```
 $ git add .
 $ git commit -m "New Post"
-$ git push --set-upstream origin draft-<lastname>
+$ git push --set-upstream origin d-<topic>-<lastname>
 ```
 
 From here you'll want to visit the github repo and create a new PR branching from master. Once the PR is up you should ask around for feedback and editing assistance from other engineers. We'd like to stick to a publishing schedule so PRs should be reviewed and merged within a day or two.
