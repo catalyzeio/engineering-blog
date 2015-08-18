@@ -11,7 +11,7 @@ If you're used to a world of OAuth handshakes, Pub/Sub and HTTPS for authorizati
 
 ## Let's talk about networking
 
-(image: zdt7agj.gif)
+![VPN](/assets/img/posts/vpn.gif)
 
 The OSI 7 Layer Model outlines a standard format for data transfer from the wires and cables to the data a user sees in an application. When you take a look at the [HHS Data Breaches for 2014](http://www.hhs.gov/ocr/privacy/hipaa/administrative/breachnotificationrule/breachtool.html) you mostly see three types of electronic data breaches. 
 

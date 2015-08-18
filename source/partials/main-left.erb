@@ -11,7 +11,7 @@
 	<div class="popular-posts">
 		<h1><i class="fa fa-eye"></i> Read More Articles</h1>
 		<ul>
-			<% blog.articles[0...5].each do |article| %>
+			<% blog.articles[2...7].each do |article| %>
 			<li><a href="<%= article.url %>"><%= article.title %></a></li>
 			<% end %>
 		</ul>
