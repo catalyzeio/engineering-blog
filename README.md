@@ -69,7 +69,7 @@ Corresponds to an image of the author. This bit should be your first name only a
 The full name of the author that wrote the article. Whatever is written here will be displayed with the post next to the image corresponding to author.
 
 **`author_alt`:**
-
+This will display some note about the post. It is most commonly used to give a second author credit.
 
 #### Media requirements
 
