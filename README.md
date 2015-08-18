@@ -32,7 +32,7 @@ Posts can include media such as images, video and audio.
 
 **[If you're not up for a read you can view this video that will tell you how to publish a new blog post.](https://www.dropbox.com/s/3b3kg4fwicw7hpr/how_to_blog.mov?dl=0)**
 
-#### 1.
+#### 1. Create a new draft branch
 
 _Once you have the repository cloned, have pulled/checked out `master` and running locally you'll want to create a new branch for your post:_
 
@@ -47,7 +47,7 @@ If you have two drafts going at once you'd simply add a number after `draft`:
 $ git branch draft2-<lastname>
 ```
 
-#### 2.
+#### 2. Write your post with proper file name and frontmatter
 
 Now that you're on a new branch you can start writing your post. Below is a template for new blog posts:
 
@@ -80,7 +80,7 @@ This will display some note about the post. It is most commonly used to give a s
 **`tags`:**
 Tags are used as a way to give the reader a quick overview what topics to expect out of the current article. Tags should be consistent throughout the blog. This means words like HIPAA are spelled in all caps.
 
-#### 3.
+#### 3. Push your new draft branch to github and create a PR
 
 Once you've written your post, named the file correctly, and filled in all frontmatter you can push up your new branch:
 
@@ -93,6 +93,10 @@ $ git push --set-upstream origin draft-<lastname>
 From here you'll want to visit the github repo and create a new PR branching from master. Once the PR is up you should ask around for feedback and editing assistance from other engineers. We'd like to stick to a publishing schedule so PRs should be reviewed and merged within a day or two.
 
 **Note: During this step it's also important to make sure that the `rake build` tasks succeeds. Fortunately this is automated with Codeship. You can either view the Codeship status badge at the top of this README (gray = running, red = failed, green = success), or ask [Ryan](mailto:ryan@catalyze.io) for access to the Codeship dashboard.**
+
+#### 4. Merge your draft branch into master
+
+Now that someone has reviewed your new post and all proper editing has taken place we can now merge into master. This is done simply via the UI in github. This merge will automatically trigger a test and deployment from Codeship. The status of the build will post within a few seconds to the open source channel.
 
 #### Media requirements
 
