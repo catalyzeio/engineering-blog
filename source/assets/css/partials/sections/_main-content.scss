@@ -65,15 +65,14 @@
 		h4{font-size: 14px;text-transform: uppercase;}
 		ol,
 		ul{
-			padding: 20px 0px 20px 20px;
-			border-top: 1px dotted #ddd;
-			border-bottom: 1px dotted #ddd;
+			padding: 0px 0px 20px 20px;
 			margin: 0px 0px 20px 0px;
 			list-style: circle;
 			li{
 				margin: 0px 0px 20px 0px;
 				color: $c_text;
 				font-size: 12px;
+				line-height: 2;
 				font-family: $f_sans-med;
 				&:last-of-type{margin: 0px 0px 0px 0px;}
 			}
@@ -92,13 +91,13 @@
 			}
 		}
 		blockquote{
-			padding: 0px 0px 20px 0px;
+			padding: 0px 0px 0px 10px;
+			margin: 0px 0px 20px 0px;
+			border-left: 3px solid #ccc;
 			p{
-				font-size: 12px;
-				padding: 5px;
+				padding: 0px;
+				font-size: 14px;
 				font-family: $f_sans-ital;
-				@include border-radius(5px);
-				background-color: #FFFBCD;
 			}
 		}
 	}
