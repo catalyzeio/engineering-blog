@@ -1,5 +1,5 @@
 ---
-title: Building a secure, multi-tenant Docker based Platform as a Service - Part 1: Design Considerations
+title: Building a secure, multi-tenant Docker based Platform as a Service - Part 1 - Design Considerations
 date: 2015-09-04
 author: mohan
 author_full: Mohan Balachandran
