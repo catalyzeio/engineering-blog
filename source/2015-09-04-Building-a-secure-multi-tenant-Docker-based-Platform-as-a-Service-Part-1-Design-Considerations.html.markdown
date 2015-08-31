@@ -3,8 +3,8 @@ title: Building a secure, multi-tenant Docker based Platform as a Service - Part
 date: 2015-09-04
 author: mohan
 author_full: Mohan Balachandran
-author_alt: Adam Leko, Nate Radtke, Vince Kenney
-tags: PaaS,Platform as a service,Docker,Multi-tenancy,Orchestration, Docker Networking
+author_alt: Co-authors - Adam Leko, Nate Radtke, Vince Kenney
+tags: PaaS, Platform as a service, Docker, Multi-tenancy, Orchestration, Docker Networking
 ---
 
 ## Summary
@@ -34,7 +34,6 @@ The first few customers that signed on to the PaaS platform were migrated, deplo
 # Core design considerations
 
 > Don't think about the faster way to do it or the cheapest way to do it, think about the most amazing way to do it.
-
 > - Richard Branson
 
 As an obvious starting point, commoditization of software components used to build web applications has made it much easier to support arbitrary customer environments. Web frameworks such as [node.js][2] and [Ruby on Rails][3] along with storage technologies like [MySQL/Percona][4], [PostgreSQL][5], and [MongoDB][6] (among others) on top of Linux have become so common that adding support for these services enables support for a *wide* variety of user applications.
