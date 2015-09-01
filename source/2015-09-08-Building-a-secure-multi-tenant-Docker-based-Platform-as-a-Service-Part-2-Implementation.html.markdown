@@ -8,7 +8,7 @@ tags: PaaS,Platform as a service,Docker,Multi-tenancy,Orchestration,Docker Netwo
 ---
 
 
-Based on all the above requirements, we arrived at the following architecture and naming conventions.
+Based on all the requirements described [earlier](FIXME), we arrived at the following architecture and naming conventions.
 
 ### IaaS provider neutrality
 We started off on Rackspace but it was always our intention to **also** provide our services on AWS, Azure and other cloud providers. We now run on both Rackspace and AWS with support for Azure coming shortly. We also managed to get two full external HIPAA audits done and achieved [HITRUST](https://hitrustalliance.net/) [certification](https://catalyze.io/hitrust).
