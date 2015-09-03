@@ -13,7 +13,7 @@ HIPAAGRAM has gone through a huge redesign and we're really happy with how it tu
 
 ## I'm missing the big picture
 
-HIPAAGRAM is completely [open sourced](https://github.com/catalyzeio/HIPAAGRAM), but sometimes an open sourced project can be daunting and a bit challenging to comprehend. We endeavoured to make it simple by following some best practices and patterns in iOS development. However, sometimes reading code doesn't fill in the big picture. We've gotten some questions about how HIPAAGRAM actually works and what makes it so secure. So let's address those questions and prove how secure HIPAAGRAM really is. 
+HIPAAGRAM is completely [open sourced](https://github.com/catalyzeio/HIPAAGRAM), but sometimes an open sourced project can be daunting and a bit challenging to comprehend. We endeavored to make it simple by following some best practices and patterns in iOS development. However, sometimes reading code doesn't fill in the big picture. We've gotten some questions about how HIPAAGRAM actually works and what makes it so secure. We'll address those questions and prove how secure HIPAAGRAM really is. 
 
 ## A high-level overview
 
@@ -37,8 +37,8 @@ The typical flow through the app will be similar to the following steps
 
 1. A user signs into the application with their username and password
     * The credentials are stored in a private Keychain that only HIPAAGRAM has access to
-1. The user queries the `contacts` class for themselves
-    * If they don't find themselves, they add themselves to the contacts class
+1. The user queries the `contacts` class for their user record
+    * If they don't find their user record, they add their user record to the contacts class
 1. The conversation list screen is shown with every conversation the user has previously started
     * The list of conversations is populated by a query on the `conversations` class
 1. The user starts a new conversation
@@ -60,7 +60,7 @@ The reason credentials are stored in Keychain is so we can add in Passcode and T
 
 ## Sensitive data in contacts and conversations?
 
-After Keychains, it becomes apparent that the workhorse of HIPAAGRAM are the Catalyze BaaS custom classes. Specifically the `contacts` class. Keeping a class full of information you can use to start a conversation with someone seems like a prime suspect for wide open PHI. However the information in the `contacts` class is fully deidentified. Let's take a look at the schema
+After Keychains, it becomes apparent that the workhorse of HIPAAGRAM are the Catalyze BaaS custom classes. Specifically the `contacts` class. Keeping a class full of information you can use to start a conversation with someone seems like a prime suspect for inappropriate PHI access. However the information in the `contacts` class is fully deidentified. Let's take a look at the schema
 
 ```
 {
@@ -99,7 +99,7 @@ You can see that since there is no PHI in the `contacts` class, there is no PHI 
 
 When we first created HIPAAGRAM we envisioned it would be used by clinicians, patients, and researchers to communicate with each other in a HIPAA compliant fashion. We wanted a familiar messaging interface with a company directory where you could see everyone who was available to start a chat with. This is great for enterprise deployments or situations where you have a need to see everyone who is online. Sort of an IM style friends list where everyone is your friend. But what about when you push this to the app store where your friends list becomes the entire U.S.?
 
-When we pushed to the app store, we moved from enterprise mode to public mode. You no longer have a list of all available contacts in public mode. Instead, you'll need to type the exact username of the person you want to start a chat with. Once you type that in, HIPAAGRAM looks them up in the `contacts` class and starts a conversation if they exist. If they don't, well you'll have to check your spelling. This gave us an ever closer experience to the built in messaging application. You don't have a list of people you can message. If you want to send someone a text you type in their phone number and start typing. This is the idea behind public mode in HIPAAGRAM. 
+When we pushed to the app store, we moved from enterprise mode to public mode. You no longer have a list of all available contacts in public mode. Instead, you'll need to type the exact username of the person you want to start a chat with. Once you type that in, HIPAAGRAM looks them up in the `contacts` class and starts a conversation if they exist. If they don't, you'll have to check your spelling. This gave us an ever closer experience to iMessage where users don't begin with a list of people they can message on a new phone. This is the idea behind public mode in HIPAAGRAM. 
 
 ## Demystifying the messages class
 
@@ -113,11 +113,11 @@ conversations: create
 messages: create
 ```
 
-The `create` permission is obvious. We need all users to be able to create data in every class. What may not be clear is only granting `retrieve` permissions on the contacts class. By default, in Catalyze you can onnly retrieve data that you own or data that you have authored unless granted the `retrieve` permission. This is why the contacts class is globally readable by any user. Even if someone else created the data for themselves, you can still access it. This means `conversations` and `messages` only allow you to retrieve data you own or have authored. This is the **core security concept** behind HIPAAGRAM. Only you can see your conversations and only you can see your messages. It's up to HIPAAGRAM to display these in a coherent manner. 
+The `create` permission is obvious. We need all users to be able to create data in every class. What may not be clear is only granting `retrieve` permissions on the contacts class. By default, in Catalyze users can only retrieve data that they own or data that they have authored unless granted the `retrieve` permission. This is why the contacts class is globally readable by any user. Even if someone else created the data for themselves, any user can still access it. This means `conversations` and `messages` only allow you to retrieve data you own or have authored. This is the **core security concept** behind HIPAAGRAM. Users can only see their conversations and their messages. It's up to HIPAAGRAM to display these in a coherent manner. 
 
-When you choose a conversation to view, two things happen. First, a query is run against the `messages` class filtering by the conversationId for messages that you own. Second, a similar query is run except for messages that you have authored. HIPAAGRAM then combines, sorts, and displays these two result sets and you have a full conversation! 
+When you choose a conversation to view, two things happen. First, a query is run against the `messages` class filtering by the conversationId for messages that the user owns. Second, a similar query is run except for messages that the user has authored. HIPAAGRAM then combines, sorts, and displays these two result sets and provides have a full conversation! 
 
-One of the tricks when you send a message is that you don't create the message for yourself. Creating a message is done by creating an instance of the `messages` class on behalf of the recipient of your message. This way you are the author and the recipient is the owner and you can both read the message. All of these concepts strongly backed by Catalyze ACLs make up the fully HIPAA compliant and secure messaging platform HIPAAGRAM.
+One of the tricks when you send a message is that users create the message for yourself. Creating a message is done by creating an instance of the `messages` class on behalf of the recipient of your message. This way you are the author and the recipient is the owner and you can both read the message. All of these concepts strongly backed by Catalyze ACLs make up the fully HIPAA compliant and secure messaging platform HIPAAGRAM.
 
 ## Push notifications
 
