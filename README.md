@@ -111,4 +111,4 @@ Videos can be taken either with QuickTime and uploaded to YouTube or with [Quick
 
 ### Publishing
 
-Publishing is handled by Codeship. Any push to master results in a deployment to the blog server.
+Publishing is handled by Codeship. Any push to master results in a deployment to the blog server on digital ocean.
