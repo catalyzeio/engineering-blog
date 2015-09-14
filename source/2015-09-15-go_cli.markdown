@@ -15,7 +15,7 @@ Our primary goal is to officially support Mac, Windows, and Linux for our CLI ut
 
 After spending some time with Go, it's a fairly simple language to understand. With a background primarily in Python, Java, Objective-C, and Swift, I was able to pick up Go rather quickly. It's a simplistic language which should be easy to pick up for any seasoned developer. If there is a challenge reading go code, it is more likely to be because of lack of domain knowledge rather than ability to read the code itself.
 
-Concurrency in go couldn't get any easier by executing a goroutine with the keyword `go`. Once concurrency and threading get added in, it can become difficult to manage a pipeline of communication between the threads. Go solves this with channels and the `chan` keyword. Just send in a `chan` to a goroutine to enable bidirectional communication. These basic concepts and ease of use make Go a likely candidate for any future tasks.
+Concurrency in Go couldn't get any easier by executing a goroutine with the keyword `go`. Once concurrency and threading get added in, it can become difficult to manage a pipeline of communication between the threads. Go solves this with channels and the `chan` keyword. Just send in a `chan` to a goroutine to enable bidirectional communication. These basic concepts and ease of use make Go a likely candidate for any future tasks.
 
 ## Why the switch?
 
