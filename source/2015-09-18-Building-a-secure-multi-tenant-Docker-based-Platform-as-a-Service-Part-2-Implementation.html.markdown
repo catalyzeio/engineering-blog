@@ -1,5 +1,5 @@
 ---
-title: Building a Secure, Multi-Tenant Docker-based Platform as a Service - Part 2 - Implementation 
+title: Building a Secure, Multi-Tenant Docker-based Platform as a Service - Part 2 - Implementation
 date: 2015-09-18
 author: mohan
 author_full: Mohan Balachandran
@@ -33,7 +33,7 @@ We have also designed the pods to be something that can go across multiple avail
 
 ## Management Infrastructure
 
-There are several components in the management infrastructure and are shown in the diagram below. 
+There are several components in the management infrastructure and are shown in the diagram below.
 
 ![Architecture of the Management Infrastructure](/assets/img/posts/management_infra.png)
 
@@ -88,7 +88,7 @@ In addition to customer-specific containers, every Catalyze customer also gets t
 
 - **A Docker-ized ELK logging stack**: This is the ElasticSearch, Kibana, Logstash ([ELK](https://www.elastic.co/products)) stack. We felt it necessary to provide this to our customers in both their development and production environments. This was a safer bet than assuming that developers would always do the right thing and scrub their application and database logs for [PHI](https://catalyze.io/learn/what-is-protected-health-information-or-phi) data. This also has the additional advantage of customers not having to pay extra for a logging solution which could get very expensive very quickly. Each customer can access their logging environment via an URL which looks something like this - `https://{your-Catalyze-address}/logging/`.
 - **A Docker-ized monitoring solution**: Every customer environment also gets a dedicated [Sensu](https://sensuapp.org/) deployment. This is set up to automatically monitor all the customer containers and will shortly also allow the ability for customers to specify additional processes that they would like monitored **inside** their own containers. Each customer can access their monitoring environment via an URL which looks something like this - `https://{your-Catalyze-address}/monitoring/`.
-- **A service proxy container**: The service proxy container is a customized [nginx](http://nginx.org/) container that takes care of things such as SSL termination, basic load balancing (where appropriate), and routing within the customer environment. 
+- **A service proxy container**: The service proxy container is a customized [nginx](http://nginx.org/) container that takes care of things such as SSL termination, basic load balancing (where appropriate), and routing within the customer environment.
 - **A private overlay network**: This is one of our platform's unique offerings. We have a overlay networking solution that boasts not only the ability for each container to get it's own IP address but also takes care of things such as completely segregating traffic from different environments, even if those containers are running on the same Docker host. It also, by default, encrypts traffic via customer-specific TLS keys and does all this while enabling 1Gbps+ throughput using minimal amounts of CPU. This is something we're very excited about and will be writing and sharing more details soon.
 
 All of the container types - application, database, and cache containers - are available in a single node deployment or in Highly Available (HA) deployments. HA deployments imply different things in each of these cases. So we'll take a couple of minutes to describe that:
