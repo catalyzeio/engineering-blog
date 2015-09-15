@@ -1,5 +1,5 @@
 ---
-title: pip uninstall catalyze
+title: Moving from Python to Go for our CLI
 date: 2015-09-15
 author: josh
 author_full: Josh Ault
