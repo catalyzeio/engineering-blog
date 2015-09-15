@@ -1,0 +1,58 @@
+---
+title: Moving from Python to Go for our CLI
+date: 2015-09-15
+author: josh
+author_full: Josh Ault
+author_alt:
+tags: cli, rewrite, golang, go, python
+---
+
+We've recently noticed the number of support requests we receive from Windows-based users has been on the rise. These requests range anywhere from importing data into a database to redeploying a code service. With our current [Python-based CLI](https://github.com/catalyzeio/catalyze-paas-cli) these are self-service tasks. We distribute a PyPI version of this package that allows easy installation, but if you've ever tried to use Python on Windows (and sometimes Linux or Mac OSX!), you probably know that installing packages with more than a few trivial dependencies is not exactly easy.
+
+Our primary goal is to officially support Mac, Windows, and Linux for our CLI utility. We have had success using [the Go language](https://golang.org/) for other internal services, so we decided to investigate rewriting our CLI in Go to take advantage of its cross-platform support.
+
+## Go
+
+After spending some time with Go, it's a fairly simple language to understand. With a background primarily in Python, Java, Objective-C, and Swift, I was able to pick up Go rather quickly. It's a simplistic language which should be easy to pick up for any seasoned developer. If there is a challenge reading go code, it is more likely to be because of lack of domain knowledge rather than ability to read the code itself.
+
+Concurrency in Go couldn't get any easier by executing a goroutine with the keyword `go`. Once concurrency and threading get added in, it can become difficult to manage a pipeline of communication between the threads. Go solves this with channels and the `chan` keyword. Just send in a `chan` to a goroutine to enable bidirectional communication. These basic concepts and ease of use make Go a likely candidate for any future tasks.
+
+## Why the switch?
+
+One of the attractions to Go was the enabling of our Windows customers. Although cross platform capabilities (including Windows and Linux) was the primary driver behind the rewrite, there are a wide variety of other benefits we've gained from switching. First off, no one needs to install Go to use the Go CLI! Go gives us the ability to create compiled binary files which we can distribute to customers. The only "installation" process is putting the binary in a directory in your $PATH in which you have write permissions. This greatly decreases the barrier of entry for new customers and enormously increases the ease of installation. (The write permissions requirement is so that the CLI can self update).
+
+In Go, much of the perceived benefit of the built binaries come from the fact that they are _compiled_ binaries. In Python, simply running `catalyze help` spins up the interpreter which has to load all the libraries used. The Go CLI will give a help screen almost instantaneously. This is perhaps the largest reason we've seen a jump in responsiveness of the Go CLI. According to [Benchmarks Game](http://benchmarksgame.alioth.debian.org/u64q/compare.php?lang=go&lang2=python3), Go outperforms Python in nearly every test. We think both our engineering team and customers are going to enjoy working with the new, more responsive CLI.
+
+## Static typed vs Non-static typed
+
+The most obvious difference between Go and Python is that Go is statically typed and Python is not. This helped reveal inconsistencies in our APIs. With Go being statically typed, we were able to model out every request and response object we expect to receive and send to the API in a [single file](https://github.com/catalyzeio/cli/blob/master/models/models.go). If we saw overlap in this file, we knew we needed to fix the API to standardize response models. Similarly, if we ever unmarshalled the HTTP response into a standard JSON object just to create one of our Go models, we knew the API had to be fixed. Here's a quick example
+
+```
+var m map[string]string
+json.Unmarshal(resp, &m)
+return &models.Task{
+	ID: m["taskId"],
+}
+```
+
+Here we are unmarshalling the response into a map simply so we can create a common Go model that we use in the rest of the CLI code. Ideally, we should be able to unmarshal directly to a Task model
+
+```
+var task models.Task
+json.Unmarshal(resp, &task)
+return &task
+```
+
+In an unexpected way, we were able to identify places where our API needed quality improvement as well as immediate improvements for quick and easy fixes.
+
+## How do I download the new CLI?
+
+So how do you download this new Go CLI? First, get rid of the Python CLI.
+
+```
+pip uninstall catalyze
+```
+
+Then head over to the [Github repo](https://github.com/catalyzeio/cli#automatic-updates) and download the appropriate binary for your OS. Lastly, forget about updating the CLI because this is taken care of automatically. When new versions are pushed out, you'll get the latest and greatest right away. Remember to put the binary in a directory where you have **write permissions** for this to work! 
+
+Be sure to check out the [CLI documentation](https://github.com/catalyzeio/cli/blob/master/Docs.md) to check out some of the fantastic new features we've built. Let us know what you think by dropping us an [email](mailto:hello@catalyze.io)!
