@@ -1,5 +1,5 @@
------
-# title: Docker *is* sort of ready for production, at least for a PaaS
+---
+title: Docker *is* sort of ready for production, at least for a PaaS
 date: 2015-09-25
 author: adam
 author_full: Adam Leko
@@ -40,3 +40,4 @@ This is no different than days of IaaS yore - nowadays it is generally accepted 
 [impl_link]: FIXME
 [logspout_link]: https://github.com/gliderlabs/logspout
 [gc_link]: FIXME
+[buildstep_link]: https://github.com/progrium/buildstep
