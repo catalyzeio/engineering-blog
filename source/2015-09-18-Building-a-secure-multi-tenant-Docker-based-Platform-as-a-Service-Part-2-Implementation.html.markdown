@@ -3,7 +3,7 @@ title: Building a Secure, Multi-Tenant Docker-based Platform as a Service - Part
 date: 2015-09-18
 author: mohan
 author_full: Mohan Balachandran
-author_alt: Co-Authors - Adam Leko, Nate Radtke, Vince Kenney
+author_alt: Co-Authors - Adam Leko
 tags: PaaS, Platform as a service, Docker, Multi-tenancy, Orchestration, Docker Networking
 ---
 
