@@ -7,8 +7,6 @@ author_alt: Co-Authors - Adam Leko, Nate Radtke, Vince Kenney
 tags: PaaS, Platform as a service, Docker, Multi-tenancy, Orchestration, Docker Networking
 ---
 
-## Summary
-
 <blockquote>
     <p>Detailed explanations are just apologies in long form.</p>
     <p>- Adam Leko</p>
@@ -102,7 +100,7 @@ Multi-tenancy is a very important feature for our platform. Given the additional
 ## HA Considerations
 
 <blockquote>
-    <p>You go - Up... Up... Up... Up... Up... Up... Up... Up. </p>
+    <p>You go - Up... Up... Up... Up... Up... Up... Up... Up.</p>
     <p>- Wiz Khalifa, "Up"</p>
 </blockquote>
 
