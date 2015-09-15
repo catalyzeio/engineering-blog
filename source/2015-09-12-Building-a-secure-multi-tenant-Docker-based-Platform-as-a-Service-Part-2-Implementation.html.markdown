@@ -1,6 +1,6 @@
 ---
 title: Building a secure, multi-tenant Docker based Platform as a Service - Part 2 - Implementation 
-date: 2015-09-08
+date: 2015-09-12
 author: mohan
 author_full: Mohan Balachandran
 author_alt: Adam Leko, Nate Radtke, Vince Kenney
