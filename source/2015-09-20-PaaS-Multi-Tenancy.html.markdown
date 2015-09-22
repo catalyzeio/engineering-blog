@@ -1,13 +1,13 @@
 ---
 title: Multi-tenancy is a core requirement for security 
 date: 2015-09-20
-author: mohan
-author_full: Mohan Balachandran
-author_alt: Adam Leko
+author: adam
+author_full: Adam Leko
+author_alt: Mohan Balachandran
 tags: PaaS,Platform as a service,Docker,Multi-tenancy,Docker,Docker Networking, Networking
 ---
 
-The TL;DR version is available [here](FIXME)
+The TL;DR version is available [here](https://catalyze.io/learn/hipaa-and-multi-tenancy). 
 
 
 ## Every application is a tenant
