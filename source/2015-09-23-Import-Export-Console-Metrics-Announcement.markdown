@@ -9,7 +9,7 @@ tags: PaaS, Platform as a service, Features, Database, Import, Export, Backup, M
 
 ## Database Import/Export
 
-With a recent release of the CLI (version 2.1.0), we are bringing you a revamped database import feature. Taking what we learned from the usage of the existing functionality by our customers and feedback from them on their use cases,  we updated the CLI and the underlying APIs to fit more of those use cases. One of the use cases we are excited to incorporate into the import command is allowing you to import additional data into your database beyond any initial migrations or seed data i.e. Inserting additional data without a full wipe and replace. 
+With a recent release of the [CLI (version 2.1.0)](https://github.com/catalyzeio/cli/releases), we are bringing you a revamped database import feature. Taking what we learned from the usage of the existing functionality by our customers and feedback from them on their use cases,  we updated the CLI and the underlying APIs to fit more of those use cases. One of the use cases we are excited to incorporate into the import command is allowing you to import additional data into your database beyond any initial migrations or seed data i.e. Inserting additional data without a full wipe and replace. 
 
 Additionally, we are releasing a export command that will allow you to download historical backups, as well as point in time snapshots of your database services. Please use this with some caution as you will now have PHI data locally on your laptop. 
 
