@@ -1,11 +1,13 @@
 ---
-title: New Features in the Catalyze PaaS
+title: New Catalyze CLI features - DB Import-Export, Secure Console, Environment Metrics
 date: 2015-09-23
 author: nate
 author_full: Nate Radtke
 author_alt: Co-Authors - Josh Ault
 tags: PaaS, Platform as a service, Features, Database, Import, Export, Backup, Metrics, Console
 ---
+
+The Catalyze Platform as a Service (PaaS) continues to evolve as we get feedback from our customers on the kinds of capabilities they'd like to see. Additionally, as we receive and resolve support tickets, we try to extract common workflows and try to automate them as well. The following are three of the features that we are making publicly available. These are all available under the github repo of the [CLI](https://github.com/catalyzeio/cli). Please do provide us with feedback and please file any issues you might run into there.
 
 ## Database Import/Export
 
