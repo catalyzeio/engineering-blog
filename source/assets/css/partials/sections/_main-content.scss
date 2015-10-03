@@ -1,3 +1,20 @@
+.search{
+	margin-left: 30%;
+	input[type="text"]{
+		padding: 20px;
+		font-size: 30px;
+		font-family: $f_sans-light;
+		background-color: #E9EFF3;
+		width: 100%;
+		display: block;
+		border: 0px;
+		border-bottom: 5px solid #E9EFF3;
+		outline: none;
+		&:focus{
+			border-bottom: 5px solid $c_brand;
+		}
+	}
+}
 .main-posts{
 	margin-left: 30%;
 	padding: 30px;

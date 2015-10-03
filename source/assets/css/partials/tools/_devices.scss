@@ -91,4 +91,12 @@
 		min-width: 100%;
 		max-width: 100%;
 	}
+	.search{
+		margin-left: 0px;
+		width: 100%;
+		input[type="text"]{
+			padding: 15px;
+			font-size: 25px;
+		}
+	}
 }

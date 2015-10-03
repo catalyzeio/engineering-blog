@@ -22,11 +22,22 @@
 		<link rel="icon" type="image/png" href="/favicon.png">
 		<link href="//fhir.catalyze.io/favicon-54db3de7.png" rel="icon" type="image/png" />
 		<%= partial "partials/ga" %>
+		<script type="text/javascript">
+			(function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+			(w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+			e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+			})(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+			_st('install','x8sYWp6nzEKFRwdvEGCt','2.0.0');
+		</script>
 		<%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "styles", "syntax" %>
 		<%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
 	</head>
 	<body class="<%= page_classes %>">
 		<%= partial "partials/main-left" %>
+		<div class="search">
+			<input type="text" class="eng-blog-search" placeholder="Search">
+		</div>
 		<div class="main-posts">
 			<% blog.articles[0...10].each do |article| %>
 			<div class="post">
