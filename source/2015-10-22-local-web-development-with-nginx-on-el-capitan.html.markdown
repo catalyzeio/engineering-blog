@@ -47,7 +47,7 @@ http {
     default_type  application/octet-stream;
 
     server {
-    		# Listen on port 80 (normal http)
+        # Listen on port 80 (normal http)
         listen 80;
 
         # The value of server_name can just be `localhost`,
@@ -59,7 +59,7 @@ http {
         # Make sure there's an index file of some kind in the directory you're pointing to
         root /Users/example/my-web-project;
 
-				# This bit tells nginx how to serve files that are in /css and /img
+        # This bit tells nginx how to serve files that are in /css and /img
         # This is necessary since we're using Angular
         #  - if you aren't hosting any single page webapps, you probably won't need this
         location ~ ^/(css|img) {
@@ -73,14 +73,14 @@ http {
           break;
         }
 
-				# For everything that isn't in /css or /img
+        # For everything that isn't in /css or /img
         location / {
 
-					# This tells NGINX to first find and serve a file specified by the uri,
-					# otherwise go to index.html.
+          # This tells NGINX to first find and serve a file specified by the uri,
+          # otherwise go to index.html.
           try_files $uri /index.html;
 
-					# Don't cache anything
+          # Don't cache anything
           expires -1;
           add_header Pragma "no-cache";
           add_header Cache-Control "no-store, no-cache, must-revalidate, post-check=0, pre-check=0";
