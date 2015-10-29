@@ -10,7 +10,7 @@ tags: NGINX, local development, angular, angularjs
 # Why?
 I upgraded to El Capitan the other night, and everything was great until I started in on development the next morning. Much to my chagrin, my local Apache setup had somehow gotten mangled during the upgrade. Instead of looking into how to fix my Apache setup, I decided it would be more advantageous for me to switch over to using NGINX. We (Catalyze) have switched over to using NGINX instead of Apache for our web properties, and it just made sense to switch over my local setup to match.
 
-# Background/What is this post actually going to cover?
+# What is this post actually going to cover?
 This post will cover the process I went through to get my development environment set up appropriately on OSX El Capitan (10.11) using Homebrew to install NGINX for hosting static files. Most of the web projects at Catalyze use Angular, so there are some things in the configuration specific to hosting single page webapps.
 
 ## Installation and Preparation
