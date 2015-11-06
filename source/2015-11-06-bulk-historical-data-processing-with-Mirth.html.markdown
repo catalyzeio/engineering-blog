@@ -7,7 +7,7 @@ author_alt:
 tags: mirth, hl7, historical data
 ---
 
-A common workflow for many of our customers involves analyzing large amounts of patient information, which sometimes requires retrieving a trove of backlogged historical data from the EMR. In this post I will go over how we configure Mirth Connect to handle getting all of that data out of the EMR and into our customers' systems efficiently, reliably, and quickly.
+A common workflow for many of our customers involves analyzing large amounts of patient information, which sometimes requires retrieving a trove of backlogged historical data from the EMR. In this post I will go over how we configure Mirth Connect to handle getting all of that data out of the EMR and into our customers' systems through the HTTPS Sender efficiently, reliably, and quickly.
 
 ###Mirth Connect
 
@@ -15,7 +15,7 @@ Here at Catalyze we manage HL7 integrations with the open-source interface engin
 
 ##Source Message Queueing
 
-Let's say a healthcare organization wants to upload 700,000 HL7 messages containing historical data to one of our customer's systems. The messages will be sent across the existing production interface used for day-to-day HL7 message traffic, which currently only sees ~5,000 messages a day. Can Mirth handle such a large increase in message load? If you're clever and have top-notch reliable infrastructure, then the answer is yes!
+Let's say a healthcare organization wants to upload one million HL7 messages containing historical data to one of our customer's systems. The messages will be sent across the existing production interface used for day-to-day HL7 message traffic, which currently only sees ~20,000 messages a day. Can Mirth handle such a large increase in message load? If you're clever and have top-notch reliable infrastructure, then the answer is yes!
 
 Part of the trick is to get the messages out of the healthcare organization's queue quickly and queue them on our side instead. Mirth helps us do this with the following channel Source Settings:
 
@@ -39,7 +39,7 @@ What about situations where message sending order doesn't matter? For example, w
 * Queue Messages --> _Always_
 	* This enables message queueing on the destination in cases where sending the data takes longer than transforming the data. Unlike the source queue where incoming messages are queued prior to processing, the destination queue is for outgoing messages prior to sending. 
 * Advanced Queue Settings
-	* There're a lot of options in here, but the main one that controls the multi-threading throughput is the _Queue Threads_ setting. That's where we tell the Mirth destination queue how many messages to simultaneously send so any value greater than 1 allows for asynchronous sending. Determining what that number should be is up to you; start small with something <= 5 and make sure you're not seeing any impact on performance. Play around with it and see what works best in your environment while meeting your desired throughput!
+	* There're a lot of options in here, but the main one that controls the multi-threading throughput is the _Queue Threads_ setting. That's where we tell the Mirth destination queue how many messages to simultaneously send so any value greater than 1 allows for asynchronous sending. Determining what that number should be is up to you; start small with something <= 5 and make sure you're not seeing any impact on performance. Play around with it and see what works best in your environment while meeting your desired throughput.
 	* The other settings here are useful as well and we encourage you to read up on them. Enabling Queue Rotating will stop messages from holding up the queue if they fail, and using a Thread Assignment Variable can help if there are _some_ messages that require being sent in a certain order.
 
 Similar to message queueing, enabling these settings for an everyday HL7 feed are not the best idea as messages are typically sent out from the EMR in a certain order and should be processed/uploaded in that order as well.
@@ -52,10 +52,13 @@ A typical HL7-JSON transform only takes about 30ms, but steps like authenticatin
 
 * 1s to send 1 message = 86,400 messages a day
 * 500ms to send 1 message = 172,800 messages a day
+* 200ms to send 1 message = 432,000 messages a day
+* 20ms to send 1 message = 4,320,000 messages a day
 
 Shaving time off of each piece of the workflow can go a long way. Some suggestions for areas we've optimized in the past:
 
-* Authentication = adding functionality to cache tokens locally and reuse them until they expire is much more efficient than requesting a token for every message.
-* Asynchronous destinations = if you have multiple destinations that don't depend on each other (i.e., aren't passing values from one to the next), uncheck the "Wait for previous destination" option for each destination and Mirth will automatically process them simultaneously.
+* Authentication - adding functionality to cache tokens locally and reuse them until they expire is much more efficient than requesting a token for every message.
+* Asynchronous destinations - if you have multiple destinations that don't depend on each other (i.e., aren't passing values from one to the next), uncheck the "Wait for previous destination" option for each destination and Mirth will automatically process them simultaneously.
+* Client callbacks - as seen above the difference between a 500ms and 20ms response from Mirth is drastic. If historical messages are sent on the same channel as production messages, you could be looking at a multi-day disruption or processing before getting back to regular production. Having a web client immediately process a message and then using a webhook to send a message back to Mirth in the (unlikely) event of an error instead of parsing and doing all database writes to validate data could speed up the process significantly. That webhook could hit an endpoint in Mirth which could cause the channel to stop and trigger an alert so that an admin could troubleshoot the problem before processing more messages. 
  
-We learned a lot about Mirth in playing around with these settings and hope this is helpful to others as we all venture further down the Mirth rabbit hole.
+We learned a lot about Mirth in playing around with these settings and hope this is helpful to others. Need help with the other parts of setting up an interface like project planning and networking setup? We can help. [Check it out.](https://catalyze.io/hl7)
