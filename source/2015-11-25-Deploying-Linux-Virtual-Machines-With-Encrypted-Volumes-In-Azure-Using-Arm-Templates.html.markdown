@@ -1,5 +1,5 @@
 ---
-title: Deploying Linux Virutal Machines With Encrypted Volumes In Azure Using ARM Templates
+title: Deploying Linux Virtual Machines With Encrypted Volumes In Azure Using ARM Templates
 date: 2015-11-25
 author: heath
 author_full: Heath Skarlupka
