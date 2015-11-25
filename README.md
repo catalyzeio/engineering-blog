@@ -12,7 +12,7 @@
 
 ### Local Setup
 
-- Clone this repo, `git clone https://github.com/catalyzeio/catalyze-engineering-blog.git`
+- Clone this repo, `git clone https://github.com/catalyzeio/engineering-blog.git`
 - Navigate to this repo, `cd catalyze-engineering-blog`
 - Install gems, `bundle install`
 - Run the server, `rake run`
