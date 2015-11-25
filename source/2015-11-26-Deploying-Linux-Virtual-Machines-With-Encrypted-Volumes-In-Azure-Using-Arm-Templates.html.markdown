@@ -10,7 +10,7 @@ Vince and I were at the Microsoft ARM Templating Hackathon last week to begin th
 
 ## Disk Encryption in Azure
 
-Encrypting data at rest is a key component in the Catalyze Platform to ensure HIPAA compliance. Moving these encryption tasks to the infrastructure level helps simplify software design higher up the chain. We were excited to hear Microsoft announce recently native support for disk encryption in the Azure Cloud.  Disk encryption in the Azure Cloud relies on the Key Vault resource and a generic Application registered in Active Directory. The registered application will need permission to add and access disk encryption keys in the Key Vault. Sadly managing Active Directory resources is outside the capabilities of the Azure Resource Manager at this time, but can be manually managed in the old Azure Portal.
+Encrypting data at rest is a key component in the Catalyze Platform to ensure HIPAA compliance. Moving these encryption tasks to the infrastructure level helps simplify software design higher up the chain. We were excited to hear Microsoft announce recently native support for disk encryption in the Azure Cloud.  Disk encryption in the Azure Cloud relies on the Key Vault resource and a generic Application registered in Active Directory. The registered application will need permission to add and access disk encryption keys in the Key Vault.  Managing Active Directory resources is outside the capabilities of the Azure Resource Manager at this time, but can be manually managed in the old Azure Portal.
 
 # Setting up a new Application in the Default Active Directory.
 
@@ -51,7 +51,7 @@ Lets walk through a quick example of setting up an encrypted volume on a virtual
 
 ### 1. Install the [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
 ### 2. Via the CLI, create a new Resource Group in the East US region
-```curl
+```
 azure group create linuxDiskEncryptionGroup eastus
 ```
 ### 3. Download the [parameters file](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.parameters.json) and edit as needed.
@@ -68,7 +68,7 @@ azure group create linuxDiskEncryptionGroup eastus
 
 ### 4. Via the CLI, deploy the template using the remote [template URL](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json) and the local file path to the parameters file.
 
-```curl
+```
 azure group deployment create -g  linuxDiskEncryptionGroup -n  linuxDiskEncryptionDeployment -f https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json
 ```
 
@@ -78,4 +78,4 @@ Disc encryption in ARM depends on the "Azure Disk Encryption For Linux" Virtual 
 
 ## Final Thoughts
 
-Encrypting Linux Volumes in ARM templates requires a deep understanding of resource creation in the Azure Cloud.  It is not clear yet if the process for encrypting disks will map easily to Scale Sets, which would be required in a large infrastructure deployment.  As ARM templating matures and the demand for encrypted data at rest increases, Microsoft should make this process easier and more straightforward.
+Encrypting Linux Volumes in ARM templates requires a deep understanding of resource creation in the Azure Cloud.  As ARM templating matures and the demand for encrypted data at rest increases, Microsoft should make this process easier and more straightforward.
