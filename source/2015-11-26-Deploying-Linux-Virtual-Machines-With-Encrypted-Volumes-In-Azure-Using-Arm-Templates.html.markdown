@@ -10,48 +10,49 @@ Vince and I were at the Microsoft ARM Templating Hackathon last week to begin th
 
 ## Disk Encryption in Azure
 
-Encrypting data at rest is a key component in the Catalyze Platform to ensure HIPAA compliance.  Moving these encryption tasks to the infrastructure level helps simplify software design higher up the chain.  We were excited to hear Microsoft announce recently native support for disk encryption in the Azure Cloud.  Disk encryption in the Azure Cloud relies on the Key Vault resource and a generic Application registered in Active Directory.  The registered application will need permission to add and access disk encryption keys in the Key Vault.  Sadly managing Active Directory resources is outside the capabilities of the Azure Resource Manager at this time, but can be manually managed in the old Azure Portal.  Lets walk through a quick example of setting up an encrypted volume on a virtual machine in the Azure Cloud with Active Directory and an ARM template.
+Encrypting data at rest is a key component in the Catalyze Platform to ensure HIPAA compliance. Moving these encryption tasks to the infrastructure level helps simplify software design higher up the chain. We were excited to hear Microsoft announce recently native support for disk encryption in the Azure Cloud.  Disk encryption in the Azure Cloud relies on the Key Vault resource and a generic Application registered in Active Directory. The registered application will need permission to add and access disk encryption keys in the Key Vault. Sadly managing Active Directory resources is outside the capabilities of the Azure Resource Manager at this time, but can be manually managed in the old Azure Portal.
 
-## Setting up a new Application in the Default Active Directory.
+# Setting up a new Application in the Default Active Directory.
 
-1.  Select the “Active Directory” tab in the Azure Portal.
+Lets walk through a quick example of setting up an encrypted volume on a virtual machine in the Azure Cloud with Active Directory and an ARM template.
+
+### 1. Select the “Active Directory” tab in the Azure Portal.
 
 ![Active Directory Tab](/assets/img/posts/azure_1.png)
 
-2.  Select the “Default Directory”.
+### 2. Select the “Default Directory”.
 
 ![Default Directory](/assets/img/posts/azure_2.png)
 
-3.  Select “Develop Applications” and then select "Add an application you’re developing".
+### 3. Select “Develop Applications” and then select "Add an application you’re developing".
 
 ![Develop Applications](/assets/img/posts/azure_3.png)
 
-4.  The information entered in the next few screens isn’t important to getting disk encryption working, but being descriptive will help for the next set of steps.
+### 4. The information entered in the next few screens isn’t important to getting disk encryption working, but being descriptive will help for the next set of steps.
 
 ![Step One](/assets/img/posts/azure_4.png)
 ![Step Two](/assets/img/posts/azure_5.png)
 
-5.  After selecting the checkmark at the bottom right corner,  select "configure" in the newly created Application’s dashboard.
+### 5. After selecting the checkmark at the bottom right corner,  select "configure" in the newly created Application’s dashboard.
 
 ![Configure](/assets/img/posts/azure_6.png)
 
-6.  Under the "keys" section, select a 2 year key.
+### 6. Under the "keys" section, select a 2 year key.
 
 ![Keys](/assets/img/posts/azure_7.png)
 
-7.  Select "save" at the bottom of the page.
+### 7. Select "save" at the bottom of the page.
 
 ![Save](/assets/img/posts/azure_8.png)
 
-8.  Once the Application has been saved a key will be revealed under the keys section.  This key is known as the Application Active Directory (AAD) Client Secret.  Save this secret key along with the AAD Client ID also on the “configure” page.
+### 8. Once the Application has been saved a key will be revealed under the keys section.  This key is known as the Application Active Directory (AAD) Client Secret.  Save this secret key along with the AAD Client ID also on the “configure” page.
 
 ## Deploying a Virtual Machine with an encrypted volume via an ARM template
 
-1.  Install the [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
-2.  Via the CLI, create a new Resource Group in the East US region
-
-        azure group create linuxDiskEncryptionGroup eastus
-3.  Download the [parameters file](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.parameters.json) and edit as needed.
+1. Install the [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
+2. Via the CLI, create a new Resource Group in the East US region
+	- `azure group create linuxDiskEncryptionGroup eastus`
+3. Download the [parameters file](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.parameters.json) and edit as needed.
 
 | Parameter | Description |
 |---|---|
@@ -63,9 +64,11 @@ Encrypting data at rest is a key component in the Catalyze Platform to ensure HI
 | Passphrase | Disk encryption key |
 | tenantID | Azure CLI: "azure account show ACCOUNT_NAME" |
 
-4.  Via the CLI, deploy the template using the remote [template URL](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json) and the local file path to the parameters file.
+4. Via the CLI, deploy the template using the remote [template URL](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json) and the local file path to the parameters file.
 
-        azure group deployment create -g  linuxDiskEncryptionGroup -n  linuxDiskEncryptionDeployment -f https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json
+```curl
+azure group deployment create -g  linuxDiskEncryptionGroup -n  linuxDiskEncryptionDeployment -f https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json
+```
 
 ## Linux Disk Encryption ARM Template Explained
 
