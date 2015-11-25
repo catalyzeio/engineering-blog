@@ -66,7 +66,7 @@ azure group create linuxDiskEncryptionGroup eastus
 | Passphrase | Disk encryption key |
 | tenantID | Azure CLI: "azure account show ACCOUNT_NAME" |
 
-### 4. Via the CLI, deploy the template using the remote [template URL](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json) and the local file path to the parameters file.
+### 4. Via the CLI, deploy the template using the remote [template URL](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json) and the local file path to the parameters file.
 
 ```
 azure group deployment create -g  linuxDiskEncryptionGroup -n  linuxDiskEncryptionDeployment -f https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json
