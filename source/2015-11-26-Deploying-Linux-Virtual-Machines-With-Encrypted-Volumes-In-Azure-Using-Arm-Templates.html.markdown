@@ -49,10 +49,12 @@ Lets walk through a quick example of setting up an encrypted volume on a virtual
 
 ## Deploying a Virtual Machine with an encrypted volume via an ARM template
 
-1. Install the [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
-2. Via the CLI, create a new Resource Group in the East US region
-	- `azure group create linuxDiskEncryptionGroup eastus`
-3. Download the [parameters file](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.parameters.json) and edit as needed.
+### 1. Install the [Azure CLI](https://azure.microsoft.com/en-us/documentation/articles/xplat-cli-install/)
+### 2. Via the CLI, create a new Resource Group in the East US region
+```curl
+azure group create linuxDiskEncryptionGroup eastus
+```
+### 3. Download the [parameters file](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.parameters.json) and edit as needed.
 
 | Parameter | Description |
 |---|---|
@@ -64,7 +66,7 @@ Lets walk through a quick example of setting up an encrypted volume on a virtual
 | Passphrase | Disk encryption key |
 | tenantID | Azure CLI: "azure account show ACCOUNT_NAME" |
 
-4. Via the CLI, deploy the template using the remote [template URL](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json) and the local file path to the parameters file.
+### 4. Via the CLI, deploy the template using the remote [template URL](https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json) and the local file path to the parameters file.
 
 ```curl
 azure group deployment create -g  linuxDiskEncryptionGroup -n  linuxDiskEncryptionDeployment -f https://raw.githubusercontent.com/catalyzeio/arm-testing/master/azuredeploy.json -e parameters.json
