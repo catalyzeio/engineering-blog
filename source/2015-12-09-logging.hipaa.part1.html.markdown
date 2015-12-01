@@ -1,6 +1,6 @@
 ---
 title: Logging in a HIPAA compliant environment - Why? Part 1 of 3
-date: 2015-12-07
+date: 2015-12-09
 author: mohan
 author_full: Mohan Balachandran
 author_alt:
