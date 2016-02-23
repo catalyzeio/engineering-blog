@@ -60,7 +60,7 @@
             font-family: $f_sans;
             font-weight: 600;
             padding: 0px 0px 20px 0px;
-            color: $c_brand;
+            color: darken($c_text, 5%);
             line-height: 1.5;
         }
         h1{font-size: 22px;}
