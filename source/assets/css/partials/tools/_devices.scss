@@ -19,6 +19,34 @@
             display: block;
         }
     }
+    .main-posts{
+        .author{
+            .prof{
+                img{
+                    float: none;
+                    padding: 0px;
+                    margin: 0px 0px 10px 0px;
+                }
+                .author-name,
+                .date{
+                    float: none;
+                    padding: 0px;
+                    margin: 0px;
+                    padding: 10px 10px 0px 10px;
+                    background-color: #f4f4f4;
+                    display: block;;
+                }
+                .guest-author{
+                    float: none;
+                    padding: 0px;
+                    margin: 0px;
+                    background-color: #f4f4f4;
+                    display: block;
+                    padding: 10px 10px 10px 10px;
+                }
+            }
+        }
+    }
 }
 @media handheld, only screen and (max-width: 650px){
     .grid{
