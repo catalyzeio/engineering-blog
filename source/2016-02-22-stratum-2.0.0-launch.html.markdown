@@ -27,7 +27,7 @@ Along with Stratum 2.0.0 comes the Stratum CLI 3.0.0 . With this release we’ve
 
 ### `certs {create, list, rm, update}`
 
-> The `certs` command group allows you to manage SSL certificates for your environments. There are four subcommands: `certs create`, `certs list`, `certs rm`, and `certs update`. You can read more about managing certs, sites, and their interaction by reading [this blog post](LINK-TO-NEW-STRATUM-BLOG-POST).
+> The `certs` command group works closely with the `sites` command group. Certs allow you to manage SSL certificates for your environments. There are four subcommands: `certs create`, `certs list`, `certs rm`, and `certs update`.
 
 ### `db logs`
 
@@ -47,7 +47,7 @@ Along with Stratum 2.0.0 comes the Stratum CLI 3.0.0 . With this release we’ve
 
 ### `sites {create, list, rm, show}`
 
-> One of the newest concepts introduced in version 3.0.0 are sites. The `sites` command is how you manage and configure sites. Sites represent an nginx configuration file along with a `certs` instance that is tied to a single service. These are used for public facing services.
+> One of the newest concepts introduced in version 3.0.0 are sites. The `sites` command, along with `certs`, is how you manage and configure sites. Sites represent an nginx configuration file along with a `certs` instance that is tied to a single service. These are used for public facing services.
 
 ### `ssl resolve`
 
