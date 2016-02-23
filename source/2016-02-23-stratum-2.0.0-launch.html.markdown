@@ -1,8 +1,9 @@
 ---
 title: Stratum 2.0.0 Launch - Release Notes
-date: 2016-02-22
+date: 2016-02-23
 author: ryan
 author_full: Ryan Rich
+author_alt: Co-Authors - Josh Ault
 tags: PaaS, Stratum, release, new features
 ---
 # Announcing Stratum (2.0.0)
@@ -19,9 +20,11 @@ We’ve made some drastic improvements to the CLI, Dashboard, and performance of
 
 - **The ability to manage users in your environment:** Admins and owners can now manage users for their organization right in the dashboard. With the ability to change roles, invite new users, and delete existing users, admins have unparalleled control over who gets access to their organization.
 
+- **New service details:** Services are the lifeblood of an organization's environment. With the new services view users can see vital metrics, environment variables, and running jobs all from within a single screen.
+
 ### CLI
 
-Along with Stratum 2.0.0 comes the Stratum CLI 3.0.0 . With this release we’ve put a heavy focus on self-service capabilities. These new self-service commands lay the groundwork for an expansion of functionality in the future and ease of use with the CLI. Outlined below are the new commands in version 3.0.0 along with any updated or removed commands.
+Along with Stratum 2.0.0 comes the Stratum CLI 3.0.0. With this release we’ve put a heavy focus on self-service capabilities. These new self-service commands lay the groundwork for an expansion of functionality in the future and ease of use with the CLI. Outlined below are the new commands in version 3.0.0 as well as updated and removed commands.
 
 **New commands:**
 
@@ -63,4 +66,4 @@ Along with Stratum 2.0.0 comes the Stratum CLI 3.0.0 . With this release we’ve
 
 ### `users add`
 
-> With the latest release of the CLI and the supporting APIs, there is no longer a way to add users directly to environments. The `users add` command has been deprecated since version 2.1.2 and is now removed. To add users to your environments, please use the [invites send](https://resources.catalyze.io/paas/paas-cli-reference/invites-send/) command instead.
+> With the latest release of the CLI and the supporting APIs, there is no longer a way to add users directly to environments. The `users add` command has been deprecated since version 2.1.2 and is now removed. To add users to your environments, please use the invites send command instead.
