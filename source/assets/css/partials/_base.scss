@@ -5,8 +5,11 @@
 @import "tools/mixins";
 @import "tools/color";
 @import "tools/type";
+@import "tools/icons";
 //Sections
 @import "sections/main-left";
 @import "sections/main-content";
+@import "sections/header";
+@import "sections/footer";
 //Devices
 @import "tools/devices";

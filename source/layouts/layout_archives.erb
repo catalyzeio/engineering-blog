@@ -1,61 +1,70 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width,initial-scale=1.0">
-		<!-- Set title to current page title -->
-		<title><%= current_page.data.title || "Catalyze Engineering Blog" %></title>
-		<meta name="description" content="Catalyze Engineering Blog">
-		<!-- Set keyword content to current post keywords data -->
-		<meta name="keywords" content="<%= current_page.data.keywords %>">
-		<meta property="og:description" content="<%= current_page.data.summary %>">
-		<meta property="og:title" content="Catalyze Engineering Blog" />
-		<meta property="og:type" content="website" />
-		<meta property="og:url" content="https://engineering.catalyze.io" />
-		<meta property="og:image" content="/assets/img/logo.png" />
-		<meta property="og:locale" content="en_US">
-		<meta property="twitter:card" content="summary" />
-		<meta property="twitter:site" content="@catalyzeio" />
-		<meta property="twitter:title" content="<%= current_page.data.seotitle %>" />
-		<meta property="twitter:description" content="<%= current_page.data.summary %>" />
-		<meta property="twitter:image" content="/assets/img/logo.png" />
-		<link href="//fhir.catalyze.io/favicon-54db3de7.png" rel="icon" type="image/png" />
-		<%= partial "partials/ga" %>
-		<%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "styles", "syntax" %>
-		<%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
-	</head>
-	<body class="<%= page_classes %>">
-		<%= partial "partials/archives-left" %>
-		<div class="archives-posts">
-			<% blog.articles[0...1000].each do |article| %>
-			<div class="post">
-				<header>
-					<h1 class="title">
-					<a href="<%= article.url %>">
-						<%= article.title %>
-					</a>
-					</h1>
-					<div class="meta">
-						<ul class="tags">
-							<li><%= article.data.tags %></li>
-						</ul>
-						<div class="date"><%= article.data.date %></div>
-					</div>
-					<div class="author">
-						<div class="prof">
-							<img src="/assets/img/profiles/prof-<%= article.data.author %>.png">
-							<span class="main">
-								<%= article.data.author_full %>
-							</span>
-						</div>
-						<span class="guest">
-							<span id="guest-author"><%= article.data.author_alt %></span>
-						</span>
-					</div>
-				</header>
-			</div>
-			<% end %>
-		</div>
-		<%= javascript_include_tag "//fast.fonts.net/jsapi/06d49100-622b-4a4b-9a27-92dce71d35c3.js", "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
-	</body>
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width,initial-scale=1.0">
+        <!-- Set title to current page title -->
+        <title>Catalyze - <%= current_page.data.title || "Catalyze Engineering Blog" %></title>
+        <meta name="description" content="Catalyze Engineering Blog">
+        <!-- Set keyword content to current post keywords data -->
+        <meta name="keywords" content="<%= current_page.data.keywords %>">
+        <meta property="og:description" content="<%= current_page.data.summary %>">
+        <meta property="og:title" content="Catalyze Engineering Blog" />
+        <meta property="og:type" content="website" />
+        <meta property="og:url" content="https://engineering.catalyze.io" />
+        <meta property="og:image" content="/assets/img/logo.png" />
+        <meta property="og:locale" content="en_US">
+        <meta property="twitter:card" content="summary" />
+        <meta property="twitter:site" content="@catalyzeio" />
+        <meta property="twitter:title" content="<%= current_page.data.seotitle %>" />
+        <meta property="twitter:description" content="<%= current_page.data.summary %>" />
+        <meta property="twitter:image" content="/assets/img/logo.png" />
+        <link href="/favicon.png" rel="icon" type="image/png" />
+        <link href="//fhir.catalyze.io/favicon-54db3de7.png" rel="icon" type="image/png" />
+        <%= partial "partials/ga" %>
+        <script type="text/javascript">
+            (function(w,d,t,u,n,s,e){w['SwiftypeObject']=n;w[n]=w[n]||function(){
+            (w[n].q=w[n].q||[]).push(arguments);};s=d.createElement(t);
+            e=d.getElementsByTagName(t)[0];s.async=1;s.src=u;e.parentNode.insertBefore(s,e);
+            })(window,document,'script','//s.swiftypecdn.com/install/v2/st.js','_st');
+
+            _st('install','x8sYWp6nzEKFRwdvEGCt','2.0.0');
+        </script>
+        <%= stylesheet_link_tag "//maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css", "styles", "syntax" %>
+        <%= feed_tag :atom, "#{blog.options.prefix.to_s}/feed.xml", title: "Atom Feed" %>
+    </head>
+    <body class="<%= page_classes %>">
+        <%= partial "partials/header" %>
+        <div class="grid">
+            <div class="archives-posts">
+                <% blog.articles[0...1000].each do |article| %>
+                <div class="post">
+                    <header>
+                        <h1 class="title">
+                        <a href="<%= article.url %>">
+                            <%= article.title %>
+                        </a>
+                        </h1>
+                        <div class="meta">
+                            <ul class="tags">
+                                <li><%= article.data.tags %></li>
+                            </ul>
+                            <div class="date"><%= article.data.date %></div>
+                        </div>
+                        <div class="author">
+                            <div class="prof">
+                                <img src="/assets/img/profiles/prof-<%= article.data.author %>.png">
+                                <div class="author-name"><%= article.data.author_full %></div>
+                                <div class="date"><%= article.data.date %></div>
+                                <span class="guest-author"><%= article.data.author_alt %></span>
+                            </div>
+                        </div>
+                    </header>
+                </div>
+                <% end %>
+            </div>
+        </div>
+        <%= partial "partials/footer" %>
+        <%= javascript_include_tag "//fast.fonts.net/jsapi/06d49100-622b-4a4b-9a27-92dce71d35c3.js", "//cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js", "main" %>
+    </body>
 </html>

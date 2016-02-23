@@ -1,0 +1,83 @@
+.main-header{
+    background-color: $c_brand;
+    padding: 20px;
+    @extend .cf;
+    .logo{
+        float: left;
+        max-width: 130px;
+        position: relative;
+        span.eng-blog{
+            position: absolute;
+            font-size: 15px;
+            text-transform: uppercase;
+            color: rgba(255,255,255,0.4);
+            letter-spacing: 5px;
+            font-weight: 700;
+            top: 7px;
+            right: -160px;
+        }
+        img{max-width: 100%;height: auto;}
+    }
+    nav{
+        float: right;
+        a{
+            display: inline-block;
+            margin: 0px 0px 0px 20px;
+            color: #fff;
+            @include easing(350ms);
+            &:hover{
+                @include easing(350ms);
+                color: rgba(255,255,255,0.7);
+            }
+        }
+        a.cta{
+            font-size: 14px;
+            @include border-radius(5px);
+            padding: 8px;
+            background: #fff;
+            background: -moz-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(59%, #fff), color-stop(88%, #fafafa), color-stop(100%, #fff));
+            background: -webkit-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: -o-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: -ms-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: linear-gradient(to bottom, #fff 59%, #fafafa 88%, #fff 100%);
+            color: $c_brand;
+            border: none;
+            -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
+        }
+    }
+    a#menu{
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 8px;
+        margin: 0px;
+        background-color: rgba(0,0,0,0.3);
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        @include border-radius(5px);
+    }
+}
+.search{
+    background-color: #E9EFF3;
+    input[type="text"]{
+        padding: 20px;
+        font-size: 30px;
+        font-family: $f_sans;
+        font-weight: 300;
+        background-color: #E9EFF3;
+        width: 100%;
+        display: block;
+        border: 0px;
+        border-bottom: 2px solid transparent;
+        outline: none;
+        &:focus{
+            border-bottom: 2px solid $c_brand;
+        }
+    }
+}
