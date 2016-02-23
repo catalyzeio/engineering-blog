@@ -79,6 +79,7 @@
                 line-height: 2;
                 font-family: $f_sans;
                 font-weight: 600;
+                p{margin: 0px;padding: 0px;}
                 &:last-of-type{margin: 0px 0px 0px 0px;}
             }
         }
@@ -106,6 +107,8 @@
                 font-style: italic;
             }
         }
+        strong{font-weight: 700;}
+        em{font-style: italic;}
     }
     .meta{
         @extend .cf;
