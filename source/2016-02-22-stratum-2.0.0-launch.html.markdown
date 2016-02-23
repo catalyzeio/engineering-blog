@@ -63,4 +63,4 @@ Along with Stratum 2.0.0 comes the Stratum CLI 3.0.0 . With this release we’ve
 
 ### `users add`
 
-> With the latest release of the CLI and the supporting APIs, there is no longer a way to add users directly to environments. The `users add` command has been deprecated since version 2.1.2 and is now removed. To add users to your environments, please use the [invites send](LINK-TO-INVITES-SEND-CMD-ON-RESOURCES) command instead.
+> With the latest release of the CLI and the supporting APIs, there is no longer a way to add users directly to environments. The `users add` command has been deprecated since version 2.1.2 and is now removed. To add users to your environments, please use the [invites send](https://resources.catalyze.io/paas/paas-cli-reference/invites-send/) command instead.
