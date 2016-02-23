@@ -162,14 +162,11 @@
                 padding: 20px 0px 0px 10px;
             }
             .date{font-style: italic;color: lighten($c_text, 25%);}
-            span#guest-author{
+            .guest-author{
                 float: right;
-                margin: 17px 0px 0px 0px;
-                padding: 3px 5px;
-                background-color: #f4f4f4;
+                margin: 20px 0px 0px 0px;
                 color: darken($c_brand, 10%);
                 font-weight: 600;
-                @include border-radius(5px);
             }
         }
     }

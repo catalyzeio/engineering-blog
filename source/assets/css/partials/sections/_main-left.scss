@@ -49,27 +49,3 @@
         }
     }
 }
-.blog-left{
-    @extend .main-left;
-    background-color: #f4f4f4;
-    border-right: 1px solid #ddd;
-    @include box-shadow(0px 0px 10px #ddd);
-    .main-header{border-bottom: 1px solid #ddd;}
-    nav{
-        background-color: #f4f4f4;
-        border-top: 1px solid #ddd;
-        a{color: $c_brand;}
-    }
-    .intro{
-        background-color: #fff;
-        border: 1px solid #ddd;
-        color: $c_code-nue;
-        p{color: $c_code-nue;}
-    }
-    .popular-posts{
-        background-color: #fff;
-        border: 1px solid #ddd;
-        @include border-radius(5px);
-        h1{background-color: #fff;}
-    }
-}

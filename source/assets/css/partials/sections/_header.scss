@@ -24,6 +24,11 @@
             display: inline-block;
             margin: 0px 0px 0px 20px;
             color: #fff;
+            @include easing(350ms);
+            &:hover{
+                @include easing(350ms);
+                color: rgba(255,255,255,0.7);
+            }
         }
         a.cta{
             font-size: 14px;
@@ -42,6 +47,20 @@
             -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
             box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
         }
+    }
+    a#menu{
+        display: none;
+        position: absolute;
+        right: 20px;
+        top: 20px;
+        padding: 8px;
+        margin: 0px;
+        background-color: rgba(0,0,0,0.3);
+        text-transform: uppercase;
+        font-weight: 600;
+        color: #fff;
+        cursor: pointer;
+        @include border-radius(5px);
     }
 }
 .search{
