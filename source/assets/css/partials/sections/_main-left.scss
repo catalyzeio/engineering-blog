@@ -1,131 +1,75 @@
-.main-left{
-	background-color: $c_brand;
-	height: 100%;
-	width: 30%;
-	position: fixed;
-	overflow: scroll;
-	border-right: 1px solid darken($c_text, 20%);
-	@include box-shadow(0px 0px 10px lighten($c_text, 10%));
-	.main-header{
-		padding: 20px;
-		border-bottom: 1px solid darken($c_brand, 5%);
-		@extend .cf;
-		.logo{
-			max-width: 120px;
-			display: block;
-			float: left;
-			img{
-				max-width: 100%;
-				height: auto;
-				display: block;
-			}
-		}
-		.tag{
-			max-width: 200px;
-			display: block;
-			float: left;
-			margin: 5px 0px 0px 15px;
-			img{
-				max-width: 100%;
-				height: auto;
-				display: block;
-			}
-		}
-	}
-	nav{
-		padding: 20px;
-		position: fixed;
-		bottom: 0px;
-		width: 30%;
-		background-color: darken($c_brand, 5%);
-		a{
-			text-decoration: none;
-			display: inline-block;
-			margin: 0px 10px 0px 10px;
-			color: #fff;
-			font-family: $f_sans-reg;
-			font-size: 12px;
-			&:first-of-type{margin-left: 0px;}
-			&:last-of-type{margin-right: 0px;}
-			@include easing(350ms);
-			&:hover{
-				@include easing(350ms);
-				color: $c_code;
-			}
-		}
-	}
-}
 .intro{
-	background-color: darken($c_brand, 10%);
-	@include border-radius(5px);
-	margin: 20px;
-	padding: 20px;
-	font-family: $f_sans-mono;
-	color: $c_code;
-	p{
-		font-size: 14px;
-		line-height: 2;
-	}
+    background-color: darken($c_brand, 10%);
+    @include border-radius(5px);
+    margin: 20px;
+    padding: 20px;
+    font-family: $f_sans;
+    color: $c_code;
+    p{
+        font-size: 14px;
+        line-height: 2;
+    }
 }
 .popular-posts{
-	margin: 20px;
-	background-color: #fff;
-	border: 1px solid darken($c_brand, 10%);
-	@include border-radius(5px);
-	h1{
-		font-family: $f_sans-med;
-		color: $c_brand;
-		font-size: 14px;
-		background-color: #f4f4f4;
-		border-bottom: 1px solid #ddd;
-		padding: 15px 20px;
-		@include border-radius-top(5px);
-	}
-	ul{
-		padding: 20px;
-		li{
-			a{
-				display: block;
-				font-family: $f_sans-mono;
-				font-size: 14px;
-				text-decoration: none;
-				color: $c_text;
-				padding: 0px 0px 10px 0px;
-				margin: 0px 0px 10px 0px;
-				border-bottom: 1px dotted lighten($c_text, 10%);
-				@include easing(350ms);
-				&:hover{
-					@include easing(350ms);
-					padding-left: 10px;
-					color: darken($c_eng-brand, 20%);
-					border-bottom: 1px dotted darken($c_eng-brand, 20%);
-				}
-			}
-			&:last-of-type{a{border: 0px;margin: 0px;padding-bottom: 0px;}}
-		}
-	}
+    margin: 20px;
+    background-color: #fff;
+    border: 1px solid darken($c_brand, 10%);
+    @include border-radius(5px);
+    h1{
+        font-family: $f_sans;
+        font-weight: 600;
+        color: $c_brand;
+        font-size: 14px;
+        background-color: #f4f4f4;
+        border-bottom: 1px solid #ddd;
+        padding: 15px 20px;
+        @include border-radius-top(5px);
+    }
+    ul{
+        padding: 20px;
+        li{
+            a{
+                display: block;
+                font-family: $f_sans;
+                font-size: 14px;
+                text-decoration: none;
+                color: $c_text;
+                padding: 0px 0px 10px 0px;
+                margin: 0px 0px 10px 0px;
+                border-bottom: 1px dotted lighten($c_text, 10%);
+                @include easing(350ms);
+                &:hover{
+                    @include easing(350ms);
+                    padding-left: 10px;
+                    color: darken($c_eng-brand, 20%);
+                    border-bottom: 1px dotted darken($c_eng-brand, 20%);
+                }
+            }
+            &:last-of-type{a{border: 0px;margin: 0px;padding-bottom: 0px;}}
+        }
+    }
 }
 .blog-left{
-	@extend .main-left;
-	background-color: #f4f4f4;
-	border-right: 1px solid #ddd;
-	@include box-shadow(0px 0px 10px #ddd);
-	.main-header{border-bottom: 1px solid #ddd;}
-	nav{
-		background-color: #f4f4f4;
-		border-top: 1px solid #ddd;
-		a{color: $c_brand;}
-	}
-	.intro{
-		background-color: #fff;
-		border: 1px solid #ddd;
-		color: $c_code-nue;
-		p{color: $c_code-nue;}
-	}
-	.popular-posts{
-		background-color: #fff;
-		border: 1px solid #ddd;
-		@include border-radius(5px);
-		h1{background-color: #fff;}
-	}
+    @extend .main-left;
+    background-color: #f4f4f4;
+    border-right: 1px solid #ddd;
+    @include box-shadow(0px 0px 10px #ddd);
+    .main-header{border-bottom: 1px solid #ddd;}
+    nav{
+        background-color: #f4f4f4;
+        border-top: 1px solid #ddd;
+        a{color: $c_brand;}
+    }
+    .intro{
+        background-color: #fff;
+        border: 1px solid #ddd;
+        color: $c_code-nue;
+        p{color: $c_code-nue;}
+    }
+    .popular-posts{
+        background-color: #fff;
+        border: 1px solid #ddd;
+        @include border-radius(5px);
+        h1{background-color: #fff;}
+    }
 }
