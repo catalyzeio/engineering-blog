@@ -8,7 +8,7 @@ tags: PaaS, Stratum, release, new features
 ---
 # Announcing Stratum (2.0.0)
 
-Starting Thursday evening, February 25th 2016 shorty after 10pm, the Catalyze Platform as a Service (PaaS) will be recognized as Stratum, the compliance layer powering healthcare's transformation.
+Starting Thursday evening, February 25th 2016 shortly after 10pm, the Catalyze Platform as a Service (PaaS) will be recognized as Stratum, the compliance layer powering healthcare's transformation.
 
 We’ve made some drastic improvements to the CLI, Dashboard, and performance of Stratum. A large focus for us was abstracting certain patterns away from the dashboard in favor of the CLI. Below is a list of all changes coming in version 2.0.0.
 
