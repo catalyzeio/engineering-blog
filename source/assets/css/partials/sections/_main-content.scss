@@ -65,7 +65,11 @@
         }
         h1{font-size: 22px;}
         h2{font-size: 18px;}
-        h3{font-size: 16px;}
+        h3{
+            font-size: 25px;
+            font-weight: 300;
+            color: $c_text-light;
+        }
         h4{font-size: 14px;text-transform: uppercase;}
         ol,
         ul{
