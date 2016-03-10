@@ -58,4 +58,24 @@ As part of the Stratum release we pulled account management out of the dashboard
 
 ### The Design Process
 
+With Stratum being such a large release we had the opportunity to really change whatever we felt necessary to the user interface. In the past our experiences mostly relied on research. We found that user testing typically resulted in confirmation of our thoughts rather than new revelations. Because of this we wanted to get as far along in the design process as we could before user testing. That way we could take something substantial to the user and get their thoughts. Once we had that feedback we could then implement that before launch.
+
+Below are early examples of sketches, wireframes, and mockups for Stratum.
+
 ![Stratum Organization View](/assets/img/posts/designing-stratum/catalyze_sketches.png)
+
+#### Branding
+
+In most cases a redesign of a product doesn't usually result in any rebranding efforts. However since Stratum was so large and included a new name we wanted to align that with our other product Redpoint. For us the two core components of the rebrand were color concepts and a new logo.
+
+Previous to Stratum, PaaS had utilized a desaturated light blue. While this worked it didn't quite align with the new product and our new messaging. Redpoint was already utilizing a new red color that we really liked so we wanted to create something complementary. We eventually settled on the following palette.
+
+![Colors Overview](/assets/img/posts/designing-stratum/catalyze_colors.png)
+
+In terms of the new logo we needed something that could work as a small icon, a stand alone logo, and a logo with set type. We also wanted to continue playing off of the rock climbing/mountaineering theme we developed with Redpoint. The ideas below show the genesis of the Stratum icon.
+
+![Catalyze Stratum Logo Concepts](/assets/img/posts/designing-stratum/catalyze_logo_concepts.png)
+
+We then developed that icon into a logo with set type and added it to the family. Below you can see our Catalyze, Redpoint and Stratum logos illustrating the new brand.
+
+![New Logos](/assets/img/posts/designing-stratum/catalyze_logos.png)
