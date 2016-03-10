@@ -14,11 +14,11 @@ On February 25th 2016 Catalyze officially launched [Stratum](https://catalyze.io
 
 ### Major Changes
 
-#### Managing SLL Certificates
+#### Managing SSL Certificates
 
-One of the larger benefits of Stratum over our former PaaS dashboard is the abstraction of features away from the UI and into the CLI. In the previous dashboard we would continually see users struggling to add SSL certificates to their environments. We first attempted to fix this issues by implementing better inline documentation (a feature we're planning on adding back into Stratum at some point) and improving validation. This did alleviate the issue for some users. However we still saw a steady flow of SLL related support requests.
+One of the larger benefits of Stratum over our former PaaS dashboard is the abstraction of features away from the UI and into the CLI. In the previous dashboard we would continually see users struggling to add SSL certificates to their environments. We first attempted to fix this issue by implementing better inline documentation (a feature we're planning on adding back into Stratum at some point) and improving validation. This did alleviate the issue for some users. However we still saw a steady flow of SSL related support requests.
 
-For the design team this was rather frustrating. We wanted to help these users, but without a major change to the way the backend worked we didn't quite know how to solve the issue. What we did know was that the UI was not the place for managing SSL certificates. Fortunately with the planned Stratum release we were able to work SSL management into the CLI and in the short two week period that the product has been launched we've seen greater user success.
+This was frustrating. We wanted to help these users, but without a major change to the way the backend worked we didn't quite know how to solve the issue. What we did know was that the UI was not the place for managing SSL certificates. Fortunately with the planned Stratum release we were able to work SSL management into the CLI and in the short two week period that the product has been launched we've seen greater user success.
 
 ![Stratum CLI SSL Certs](/assets/img/posts/designing-stratum/catalyze_stratum_cli_ssl.png)
 
@@ -36,13 +36,13 @@ Environment variable management was another UI oddity that felt like it belonged
 
 #### Viewing Services
 
-Environments are built of services. These services can be anything from your application framework to your particular database. With the new Stratum dashboard users can view their environment variables, services information, running jobs, and life time metrics all from within a single view.
+Environments are built of services. These services can be anything from your application code to your particular database. With the new Stratum dashboard users can view their environment variables, service information, running jobs, and life time metrics all from within a single view.
 
 ![Stratum Stratum Metrics](/assets/img/posts/designing-stratum/catalyze_stratum_metrics.png)
 
 #### Environment Configuration
 
-Perhaps the largest change from the previous dashboard is environment configuration. Users no longer need to tediously input information about the type of environment they want to provision. All configuration is now managed completely by Catalyze. New customers will work with Catalyze sales on finalizing their environment configurations. That contract is then passed off to engineering where a new environment and organization is automatically created for you. To make changes to existing environments users can quickly file a support ticket, or reach out to sales staff.
+Perhaps the largest change from the previous dashboard is environment configuration. Users no longer need to tediously input information about the type of environment they want to provision. All configuration is now managed completely by Catalyze. New customers will work with Catalyze sales on finalizing their environment configurations. That contract is then passed off to engineering where a new environment and organization is automatically created for you.
 
 #### Organization Management
 
@@ -79,3 +79,7 @@ In terms of the new logo we needed something that could work as a small icon, a 
 We then developed that icon into a logo with set type and added it to the family. Below you can see our Catalyze, Redpoint and Stratum logos illustrating the new brand.
 
 ![New Logos](/assets/img/posts/designing-stratum/catalyze_logos.png)
+
+### Wrapping up
+
+We learned a lot as a team during this release and we're excited to continue perfecting Stratum. Stay tuned to the engineering blog to hear more and as always don't hesitate to reach out wit any questions: [hello@catalyze.io](mailto:hello@catalyze.io).
