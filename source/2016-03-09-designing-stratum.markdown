@@ -12,24 +12,50 @@ On February 25th 2016 Catalyze officially launched [Stratum](https://catalyze.io
 
 ![Stratum Product](/assets/img/posts/designing-stratum/catalyze_stratum_product.png)
 
-One of the major benefits of Stratum over our former PaaS dashboard is the abstraction of features away from the UI and into the CLI. In the previous dashboard we would continually see users struggling to complete tasks like adding SSL certificates and managing SSH keys. We first attempted to fix these issues by implementing better inline documentation and improving validation. This did alleviate the issues for some users. However we still saw a steady flow of common support tickets.
+### Major Changes
 
-What this told us was that the UI was not the right place for SSL certificates and possibly not even for SSH keys. So we moved those features into the CLI and tested with new users.
+#### Managing SLL Certificates
+
+One of the larger benefits of Stratum over our former PaaS dashboard is the abstraction of features away from the UI and into the CLI. In the previous dashboard we would continually see users struggling to add SSL certificates to their environments. We first attempted to fix this issues by implementing better inline documentation (a feature we're planning on adding back into Stratum at some point) and improving validation. This did alleviate the issue for some users. However we still saw a steady flow of SLL related support requests.
+
+For the design team this was rather frustrating. We wanted to help these users, but without a major change to the way the backend worked we didn't quite know how to solve the issue. What we did know was that the UI was not the place for managing SSL certificates. Fortunately with the planned Stratum release we were able to work SSL management into the CLI and in the short two week period that the product has been launched we've seen greater user success.
 
 ![Stratum CLI SSL Certs](/assets/img/posts/designing-stratum/catalyze_stratum_cli_ssl.png)
 
-This new CLI flow felt much more natural to users and they consistently rated it as a better experience than the dashboard. With this revelation the dashboard went though somewhat of an existential crisis. If the most powerful features of the product made the most sense in the CLI then what compelling purpose could the dashboard serve?
+#### Managing SSH Keys
 
-The answer to that question can best be seen in the image below. The dashboard is a graphical view layer into your environment. With graphs, tables and data, you can _see_ important information about your environment when it's happening.
+Handling SSH keys within the old dashboard was another point of contention for users. Our initial decision to place SSH keys inside of the UI instead of the CLI was mostly based around other tools that the design team had used in the past (notably Github). With the new Stratum release we really wanted to stick to a certain philosophy:
+
+`CLI = actions` and `UI = viewing`
+
+So with that in mind we moved SSH keys to the CLI and simply placed a note inside the dashboard notifying users of the change.
+
+#### Managing Environment Variables
+
+Environment variable management was another UI oddity that felt like it belonged in the CLI (you can start to see a pattern here). Across the board all tangentially related tools pushed users to the CLI over the UI for configuring environment variables. As users of Stratum ourselves this new method felt like a much stronger experience, and certainly one that aligned with our new philosophy.
+
+#### Viewing Services
+
+Environments are built of services. These services can be anything from your application framework to your particular database. With the new Stratum dashboard users can view their environment variables, services information, running jobs, and life time metrics all from within a single view.
 
 ![Stratum Stratum Metrics](/assets/img/posts/designing-stratum/catalyze_stratum_metrics.png)
 
-The Stratum dashboard can also be used to manage organizations, users and invites. Personal account information is now managed via an auxiliary application: [account.catalyze.io](https://account.catalyze.io).
+#### Environment Configuration
+
+Perhaps the largest change from the previous dashboard is environment configuration. Users no longer need to tediously input information about the type of environment they want to provision. All configuration is now managed completely by Catalyze. New customers will work with Catalyze sales on finalizing their environment configurations. That contract is then passed off to engineering where a new environment and organization is automatically created for you. To make changes to existing environments users can quickly file a support ticket, or reach out to sales staff.
+
+#### Organization Management
+
+Current users of Stratum might have noticed that organization management has completely changed. The big improvement here was giving users the ability to easily add other users to their organization. This was a tremendous support burden in the past and we're excited to finally give users this new level of autonomy. In the following image you can see the new layout depicting the current list of users, their role, and on the right hand side a list of currently pending invites.
 
 ![Stratum Organization View](/assets/img/posts/designing-stratum/catalyze_orgs.png)
 
-We pulled account management out of the dashboard for one main reason, ease of supporting current and new products. We're also working towards single sign on and multi-factor authentication, both of which will tie directly into account management.
+#### Personal Account Management
+
+As part of the Stratum release we pulled account management out of the dashboard for one main reason, ease of supporting current and new products. We're also working towards single sign on and multi-factor authentication, both of which will tie directly into account management. Users can now change their email and password as well as see which organizations they belong to from within the [Catalyze Account Manager](https://account.catalyze.io).
 
 ![Stratum Organization View](/assets/img/posts/designing-stratum/catalyze_account.png)
+
+### The Design Process
 
 ![Stratum Organization View](/assets/img/posts/designing-stratum/catalyze_sketches.png)
