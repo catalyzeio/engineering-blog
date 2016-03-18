@@ -13,7 +13,7 @@ Two [vulnerabilities](http://seclists.org/oss-sec/2016/q1/645) (CVE-2016-2315 an
 
 ### Technical Details
 
-The vulnerabilities, identified by Laël Cellier, are a result of the use of the function [path_name()](https://github.com/git/git/blob/v1.7.0/revision.c#L18) to append the filename at the end of the path in a repository tree. The function makes use of two signed integers (nlen and len), which can be positive or negative, resulting in the possibility of an integer overflow. Passing a very large file name or number into strlen() will overflow nlen and len with a negative value. Finally, the usage of strcpy() will copy the large filename over the small amount of memory allocated, resulting in a heap overflow.
+The vulnerabilities, identified by Laël Cellier, are a result of the use of the function `path_name()` to append the filename at the end of the path in a repository tree. The function makes use of two signed integers (`nlen` and `len`), which can be positive or negative, resulting in the possibility of an integer overflow. Passing a very large file name or number into `strlen()` will overflow nlen and len with a negative value. Finally, the usage of `strcpy()` will copy the large filename over the small amount of memory allocated, resulting in a heap overflow.
 
 ### Patching Systems
 
