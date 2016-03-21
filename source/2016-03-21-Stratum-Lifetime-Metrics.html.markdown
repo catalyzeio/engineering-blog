@@ -1,13 +1,13 @@
 ---
-title: Docker Container Metrics. So Easy an Intern Can Do it?
+title: Stratum Lifetime Metrics
 date: 2016-03-21
 author: kgrieger
 author_full: Kyle Grieger
 author_alt: Co-Authors - Thomas Malcolm
 tags: metrics, docker, PaaS, new features, Stratum, open source
 ---
-#Docker Container Metrics. So Easy an Intern Can Do it?
 
+##Docker Container Metrics. So Easy an Intern Can Do it?
 Our recently released product, Stratum, is built on top of [Docker](https://www.docker.com/). Each job is essentially a Docker container that is performing a task of sorts. As an infrastructure company, it is essential to monitor these containers in order to determine if a user’s environment is stable or possibly experiencing complications. It is also important for users to have access to their environment’s performance metrics in order for them to get the most out of the Stratum product.  This raises the question for the engineers at Catalyze, what is the best way to accurately and efficiently monitor Docker container performance? So the Catalyze interns set out for the answer, prototyping several Docker monitoring configurations including:
 
 * [Collectd](https://collectd.org/) and [Graphite](http://graphite.readthedocs.org/en/latest/dashboard.html),
