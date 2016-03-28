@@ -1,0 +1,25 @@
+---
+title: Stratum 2.0.4 Release Notes
+date: 2016-03-27
+author: ryan
+author_full: Ryan Rich
+author_alt:
+tags: stratum, 2.0.4, release notes
+---
+
+On Thursday March 31st 2016 at 12:00am CST, Catalyze will be releasing our latest updates to Stratum.
+
+The following bugs have been fixed in 2.0.4:
+
+Missing ability to resend an activation email
+UTC time is being wrongly converted wrong into Central Time
+
+We’ve added the following improvements in 2.0.4:
+
+Inline documentation: See which CLI commands correspond to Web UI features
+Improved security: Support for account lockout after too many incorrect password attempts (Specific details sent earlier in the week)
+Single sign on: Moved to a single domain setup for all Catalyze products, meaning users no longer have to sign in multiple times
+Documentation: Added a new guide on how to deploy to Catalyze with Codeship
+Metrics: Improved job visualization
+
+Note regarding single sign on:
