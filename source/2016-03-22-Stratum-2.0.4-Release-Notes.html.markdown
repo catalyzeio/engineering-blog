@@ -1,0 +1,23 @@
+---
+title: Stratum 2.0.4 Release Notes
+date: 2016-03-22
+author: ryan
+author_full: Ryan Rich
+author_alt:
+tags: stratum, release, 2.0.4
+---
+
+On **Thursday March 31st 2016 at 12:00am CST**, Catalyze will be releasing our latest updates to Stratum. We've made some excellent improvements this time around and we're excited to share them with you.
+
+#### The following bugs have been fixed in 2.0.4:
+
+- Missing ability to resend an activation email
+- UTC time is being wrongly converted into Central Time
+
+#### We’ve added the following improvements in 2.0.4:
+
+- **_Inline documentation:_** This feature allows you to see which CLI commands correspond to Web UI features. You can low simply click a button to the proper corresponding CLI command.
+- **_Improved security:_** With support for account lockout, Catalyze has greatly improved user level access security. From a high level this means that after too many incorrect password attempts, users will be locked out of their account. We sent specific details on this earlier in the week.
+- **_Single sign on:_** We have moved Stratum, Redpoint and BaaS to a single domain setup. This means users no longer have to sign in multiple times. After this release all products will be available at [product.catalyze.io](https://product.catalyze.io).
+- **_Documentation:_** Added a [new guide](https://resources.catalyze.io/stratum/articles/codeship-deployments/) on how to deploy to Catalyze with Codeship.
+- **_Metrics:_** We've greatly improved job visualization on service metrics. You can read more about that specific improvement [here](TODO).
