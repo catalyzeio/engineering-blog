@@ -47,7 +47,7 @@
         }
         // Full Post
         a{
-            color: #A95CF1;
+            color: #1055ff;
             text-decoration: none;
             @include easing(350ms);
             &:hover{
@@ -55,6 +55,29 @@
                 color: $c_brand;
                 text-decoration: underline;
             }
+        }
+        // Read more button
+        a.read-more{
+            display: block;
+            text-align: center;
+            width: 150px;
+            margin: 0px 0px 20px 0px;
+            font-size: 14px;
+            @include border-radius(5px);
+            padding: 8px;
+            background: #fff;
+            background: -moz-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: -webkit-gradient(linear, left top, left bottom, color-stop(59%, #fff), color-stop(88%, #fafafa), color-stop(100%, #fff));
+            background: -webkit-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: -o-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: -ms-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
+            background: linear-gradient(to bottom, #fff 59%, #fafafa 88%, #fff 100%);
+            color: $c_brand;
+            border: none;
+            -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
+            -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
+            box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
+            &:hover{text-decoration: none;}
         }
         h1,h2,h3,h4{
             font-family: $f_sans;
@@ -77,12 +100,12 @@
             margin: 0px 0px 20px 0px;
             list-style: circle;
             li{
-                margin: 0px 0px 20px 0px;
+                margin: 0px 0px 10px 0px;
                 color: $c_text;
                 font-size: 14px;
-                line-height: 2;
+                line-height: 1.5;
                 font-family: $f_sans;
-                font-weight: 600;
+                font-weight: 400;
                 p{margin: 0px;padding: 0px;}
                 &:last-of-type{margin: 0px 0px 0px 0px;}
             }

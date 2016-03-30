@@ -1,0 +1,28 @@
+---
+title: Stratum 2.0.4 Release Notes
+date: 2016-03-29
+author: ryan
+author_full: Ryan Rich
+author_alt:
+tags: stratum, release, 2.0.4
+---
+
+On **Thursday March 31st 2016**, Catalyze will be releasing our latest updates to Stratum. We've made some excellent improvements this time around, and we're excited to share them with you.
+
+### The following bugs have been fixed in 2.0.4:
+
+- Stratum was missing the ability to resend an activation email, we've since fixed that.
+- UTC time was being improperly converted to local time. All times are now displaying correctly.
+- Database backups were intermittently failing with larger sizes. Now any size database can reliably be backed up and exported with the CLI (this applies to file imports as well).
+
+### We’ve added the following improvements in 2.0.4:
+
+- **_Inline documentation:_** This feature allows you to see which CLI commands correspond to Web UI features. Now you can simply click a button to see the proper corresponding CLI command. An example of this feature can be seen directly on "service_proxy" service blocks using the yellow CLI button. Clicking this will reveal the `catalyze certs` and `catalyze sites` commands, which are responsible for managing domain name setup as well as SSL certificates.
+![Stratum Inline Docs Demo](/assets/img/posts/stratum-2.0.4-release/stratum_demo_inline_docs.gif)
+- **_Support Ticket Creation:_** Users of Stratum can now file support tickets directly from the Stratum dashboard. This new ticket creation feature includes all the relevant information automatically, so users no longer have to hunt for things like Environment ID.
+- **_Improved security:_** Security around user accounts has been heightened. After too many incorrect password attempts, accounts will be locked, and unlocking instructions will be sent via email. We sent further details on this earlier in the week.
+- **_Single sign on:_** We have moved Stratum, Redpoint and BaaS to a single domain setup. This means users no longer have to sign in multiple times. After this release, all products will be available at [product.catalyze.io](https://product.catalyze.io).
+- **_Documentation:_** Added a [new guide](https://resources.catalyze.io/stratum/articles/codeship-deployments/) on how to deploy to Catalyze with Codeship.
+- **_Metrics:_** Previously, we were directly displaying jiffies. Part of this was due to some technical limitations to how we initially implemented metrics, but with the release of Stratum and implementation of Lifetime Metrics, we had the technical capability of showing CPU usage as a percentage instead of as jiffies, which we have found to be immensely more useful and sensible. The other area that we wanted to improve was in tying the metrics data in the charts to the list of jobs more clearly. With Stratum 2.0.4, we assign each deploy job a color which is used throughout the charts, and all jobs that are displayed in the charts now appear in the list of jobs.
+
+As always please let us know if you have any issues, comments, or feedback: [hello@catalyze.io](mailto:hello@catalyze.io)
