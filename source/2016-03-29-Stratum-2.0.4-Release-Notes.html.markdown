@@ -1,6 +1,6 @@
 ---
 title: Stratum 2.0.4 Release Notes
-date: 2016-03-22
+date: 2016-03-29
 author: ryan
 author_full: Ryan Rich
 author_alt:
@@ -11,8 +11,9 @@ On **Thursday March 31st 2016**, Catalyze will be releasing our latest updates t
 
 ### The following bugs have been fixed in 2.0.4:
 
-- Missing ability to resend an activation email
-- UTC time was being improperly converted to local time
+- Stratum was missing the ability to resend an activation email, we've since fixed that.
+- UTC time was being improperly converted to local time. All times are now displaying correctly.
+- Database backups were intermittently failing with larger sizes. Now any size database can reliably be backed up and exported with the CLI (this applies to file imports as well).
 
 ### We’ve added the following improvements in 2.0.4:
 
