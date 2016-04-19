@@ -13,7 +13,7 @@ On most Linux distributions, you can find the SSH configuration file at `/etc/ss
 
 
 # *Defaults to Check*
-These are the common defaults you will find in your sshd_config. These parameters can mostly be left unchanged as recommended below.
+These are the common defaults you will find in your `sshd_config`. These parameters can mostly be left unchanged as recommended below.
 
 ## Disallow Empty Password
 
@@ -47,7 +47,7 @@ While the name may sound more secure, it is recommended to disable Challenge Res
 
 ## Ignore Rhosts
 
-In some situations Rhosts authentication can be useful, however it allows connections through the insecure r-commands. Keep the default of `yes` to ignore the user’s .rhosts and .shosts files.
+In some situations Rhosts authentication can be useful, however it allows connections through the insecure r-commands. Keep the default of `yes` to ignore the user’s `.rhosts` and `.shosts` files.
 
 	Default: IgnoreRhosts yes
 
@@ -66,7 +66,7 @@ Due to the daily occurence of brute-force scanning attempts against SSH password
 
 ## Disable Root Login
 
-With the root account comes great power, thus it’s not recommended to allow root login over SSH. A better approach is to allow normal users SSH access and to gain root level access through su/sudo. 
+With the root account comes great power, thus it’s not recommended to allow root login over SSH. A better approach is to allow normal users SSH access and to gain root level access through `su/sudo`. 
 
 	Default: PermitRootLogin without-password
 	Change: PermitRootLogin no
@@ -82,7 +82,7 @@ In most cases, X11 Forwarding isn’t necessary, especially in the case of a ser
 
 Not every user may need remote SSH access. You can allow or deny access to specific users or groups, with the latter being easier to manage. Using both AllowUsers and AllowGroups are incompatible, as AllowUsers takes precedent over AllowGroups. 
 
-Specific hosts can also be managed in /etc/hosts.allow and /etc/hosts.deny. As a good practice, it’s recommended to disallow access from any unspecified host, and whitelist a set of specific hosts.
+Specific hosts can also be managed in `/etc/hosts.allow` and `/etc/hosts.deny`. As a good practice, it’s recommended to disallow access from any unspecified host, and whitelist a set of specific hosts.
 
 	Default: N/A
 	Change: AllowGroups [group] [group2] or AllowUsers [name] [name2]
@@ -95,7 +95,7 @@ Specific hosts can also be managed in /etc/hosts.allow and /etc/hosts.deny. As a
 
 There are two sides to this argument, as some may argue changing the default port reduces your risk to automated attacks (especially unpatched zero day vulnerabilities) and reduces noise to filter when reviewing brute force attempts in your logs. Others may argue that this only achieves security through obscurity and adds complications. 
 
-While both arguments may have valid points, keep in mind that administrations may often change the default port to another easily guessable port, port 2222 or something similar. However, with this approach any user (including non-root) could potentially listen on any unprivileged port above 1024.  If you go this route, your best bet would be a rarely used well known port. Additional security options could include Fail2Ban or OSSEC Active Response to ban users making unauthorized connection attempts, or to implement port knocking for your server.
+While both arguments may have valid points, keep in mind that admins may often change the default port to another easily guessable port, port 2222 or something similar. However, with this approach any user (including non-root) could potentially listen on any unprivileged port above 1024.  If you go this route, your best bet would be a rarely used well known port. Additional security options could include Fail2Ban or OSSEC Active Response to ban users making unauthorized connection attempts, or to implement port knocking for your server.
 
 	Default: Port 22
 	Change: Optional
