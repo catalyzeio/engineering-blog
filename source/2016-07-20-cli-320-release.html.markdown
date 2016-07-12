@@ -1,6 +1,6 @@
 ---
 title: CLI 3.2.0 Release
-date: 2016-07-19
+date: 2016-07-20
 author: josh
 author_full: Josh Ault
 author_alt:
