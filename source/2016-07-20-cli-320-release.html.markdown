@@ -4,20 +4,19 @@ date: 2016-07-20
 author: josh
 author_full: Josh Ault
 author_alt:
-tags: cli, 3.2.0, stratum, 2.1
+tags: cli, 3.2.0, stratum, 2.1.0
 ---
+The launch of Stratum 2.1.0 brings a big update to the Stratum CLI. New features like Multi-Factor Authentication (MFA) support, release management, and deployment rollbacks give you more control and enhanced security to keep your data safe. Here's a quick look at the newest additions to the CLI in version 3.2.0.
 
-The launch of Stratum 2.1 brings a big update to the Stratum CLI. Tons of new features like Multi-Factor Authentication (MFA) support, release management, and rollbacks give you more control and enhanced security to keep your data safe. Here's a quick look at the newest additions to the CLI in version 3.2.0.
+## NGINX Site Values
 
-## Nginx Site Values
-
-A commonly requested feature has now made it into the Stratum CLI: customizeable nginx configs. In 3.2.0, the `sites create` command allows you to specify nginx timeouts, enable websockets, or enable CORS support by passing in a few flags. To enable CORS support, run
+A commonly requested feature has now made it into the Stratum CLI: customizable NGINX configs. In 3.2.0, the `sites create` command allows you to specify NGINX timeouts, enable websockets, or enable CORS support by passing in a few flags. To enable CORS support, run:
 
 ```
 catalyze sites create .example.com code-1 wildcard_example_com --enable-cors
 ```
 
-Or to set the send and read timeouts, run
+Or to set the send and read timeouts, run:
 
 ```
 catalyze sites create .example.com code-1 wildcard_example_com --proxy-read-timeout 60 --proxy-send-timeout 60
@@ -27,7 +26,7 @@ You can see all available options by running `catalyze sites create --help`. If 
 
 ## Services and Services Stop
 
-There is a new member of the `services` command group: `services stop`. `services stop` is an easy way to shutdown all components of a given service. This is especially beneficial during a maintenance window that requires all connections to your database to be terminated. Just pass the name of the service you want to stop, perform any necessary tasks, and redeploy. 
+There is a new member of the `services` command group: `services stop`. This new command is an easy way to shutdown all components of a given service. This is especially beneficial during a maintenance window that requires all connections to your database to be terminated. Just pass the name of the service you want to stop, perform any necessary tasks, and redeploy.
 
 ```
 catalyze services stop code-1
@@ -35,25 +34,23 @@ catalyze services stop code-1
 catalyze redeploy code-1
 ```
 
-Be careful using the `services stop` command as it will terminate all instances of your application, all workers, all currently open consoles, and all rake tasks.
-
-Since the `services` command group has grown, the original `services` command has been deprecated and moved to `services list`.
+Be careful using the `services stop` command as it will terminate all instances of your application, all workers, all currently open consoles, and all rake tasks. Since the `services` command group has grown, the original `services` command has been deprecated and moved to `services list`.
 
 ## Clear
 
-The Stratum CLI stores its settings in a file called `.catalyze` in your home directory. This file keeps track of items such as the associated environments, session information, available pods, etc. Editing this file is now managed with the `clear` command. The `clear` command allows you to specify individual settings to remove in order to help alleviate any inconsistencies your local install may have. To remove your session information, run
+The Stratum CLI stores its settings in a file called `.catalyze` in your home directory. This file keeps track of items such as the associated environments, session information, available pods, etc. Editing this file is now managed with the `clear` command. The `clear` command allows you to specify individual settings to remove in order to help alleviate any inconsistencies your local install may have. To remove your session information, run:
 
 ```
 catalyze clear --session
 ```
 
-Or to remove all associated environments and the default environment, run
+Or to remove all associated environments and the default environment, run:
 
 ```
 catalyze clear --environments --default
 ```
 
-Or to just remove all settings
+Or to just remove all settings, run:
 
 ```
 catalyze clear --all
@@ -61,15 +58,13 @@ catalyze clear --all
 
 ## Releases and Rollback
 
-You can now manage your application deployments with the `releases` and `rollback` commands. Every time you perform a `git push catalyze master`, a new release will automatically be created. Run 
+You can now manage your application deployments with the `releases` and `rollback` commands. Every time you perform a `git push catalyze master`, a new release will automatically be created. For example:
 
 ```
 catalyze releases list code-1
 ```
 
-to list all releases for the given service. The currently running release will have an `*` next to it.
-
-If a recent deployment didn't go as planned, just rollback to an earlier release.
+&hellip; will list all releases for the given service. The currently running release will have an `*` next to it. If a recent deployment didn't go as planned, just rollback to an earlier release like so:
 
 ```
 catalyze rollback code-1 EXAMPLE_RELEASES_NAME
@@ -83,6 +78,4 @@ Version 3.2.0 of the Stratum CLI comes with full support for accounts with MFA e
 
 ## How do I download the update?
 
-Updating your CLI is easy. In fact, it's automatic! Your CLI will automatically update to version 3.2.0. But if not, you can always run `catalyze update` to get the latest and greatest.
-
-Be sure to check out the [full release notes](https://github.com/catalyzeio/cli/releases/tag/3.2.0) to see everything that's changed. Let us know what you think by dropping us an [email](mailto:hello@catalyze.io)!
+Updating your CLI is easy. In fact, it's automatic! Your CLI will automatically update to version 3.2.0. But if not, you can always run `catalyze update` to get the latest and greatest. Be sure to check out the [full release notes](https://github.com/catalyzeio/cli/releases/tag/3.2.0) to see everything that's changed. Let us know what you think by dropping us an [email](mailto:hello@catalyze.io)!
