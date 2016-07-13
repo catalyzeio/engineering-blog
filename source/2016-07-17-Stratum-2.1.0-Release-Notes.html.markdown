@@ -1,0 +1,61 @@
+---
+title: Stratum 2.1.0 Release Notes
+date: 2016-07-17
+author: raj
+author_full: Rajashekar Sundaramurthy
+author_alt:
+tags: stratum, release, 2.0.4
+---
+
+Catalyze is pleased to announce the General Availability of Version 2.1 of Stratum, the industry leading HIPAA Compliant Platform As A Service. This release will be available to all Stratum customers on July 17th, 2016.
+
+This release contains major updates focused on enhanced security, improved ability to manage application deployment failures and enable organizations to utilize Stratum effectively across multiple deployment models and varying configuration management tools/processes.
+
+# Highlights of Stratum V2.1
+
+#### Agent Based Deployments
+Users and organizations can now leverage configuration management tools such as Puppet, Chef, and Ansible on Catalyze Stratum! This is a feature we worked tirelessly to deliver and we think you’ll love it. No longer are teams constrained to the common git workflow.
+
+#### Deployment Rollbacks:
+When developers are working away at 3:00am burning the midnight oil, it’s not uncommon to make a deployments that just don’t work. No longer will you have to dig through pages and pages of logs to figure out why while your app sits broken. With the new Deployment Rollback features users can quickly find previously successful build and revert back to them in a single command.
+
+#### Secure your access with Multi-Factor Authentication:
+Add an extra layer of protection over your user-id and password. Stratum 2.1 supports use of One-Time Passcode (E-Mail or Google Authenticator) as an additional credential to be presented at the time of requesting access to Catalyze applications.
+
+#### Bring Your Own Docker (BYOD):
+Users who develop applications with Docker can now seamlessly integrate that workflow in with Stratum. The Bring Your Own Docker features allows users to simply provide Catalyze with a working Dockerfile in order to get their application online.
+
+#### Windows VM Support:
+With Windows VM Support customers can now leverage our compliance services for Windows applications. Windows VM support is especially useful for customers wishing to migrate to cloud infrastructure without having to manage the headache of learning about, securing, managing, maintaining, and monitoring that infrastructure.
+
+#### Catalyze CLI Enhancements:
+The Catalyze Command Line Interface  has been expanded to support the functionality for listing and updating application releases. In addition, error message details have been expanded to provide corrective action recommendations (where applicable).
+
+# Issues Resolved in Stratum 2.1
+
+- Intermittent issues with nightly backups not updating in S3.
+- A few of our customers had reported that Service redeploys were not occurring after a build.
+- Base members of an organization were not allowed to remove themselves from that organization.
+- When re-sending an email activation for a Catalyze account the Core API was not checking if the user had already been activated.
+- Intermittent disappearance of DNS records on a Service Proxy redeploy.
+- When S3 uploads fail their status was not being updated to “failed”.
+
+# Customer Support:
+
+- In order to tend to your support issue in a timely manner please submit your ticket through the Stratum dashboard by clicking on the Contact Support button located in the footer of your environment UI
+- **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
+Support hours are Monday through Friday 8:00 a.m. to 6:00 p.m. Central time.
+For Critical Problems (Severity-1) after Normal Support Hours:
+After-hours support for severity-1 failures is available on all working days, weekends and US public holidays
+
+# Additional References:
+
+For more information on the Stratum Platform and about Catalyze’s offerings, please visit:
+
+- Resources:resources.catalyze.io
+- Training Docs: training.catalyze.io
+- HL7 Docs and Mock API: hl7-docs.catalyze.io
+- FHIR Docs and Mock API: fhir.catalyze.io
+- Policy Docs: policy.catalyze.io
+- Engineering Blog: https://engineering.catalyze.io
+- Stratum FAQ: https://resources.catalyze.io/stratum/faq/
