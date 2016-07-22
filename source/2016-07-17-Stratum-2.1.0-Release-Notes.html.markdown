@@ -52,10 +52,10 @@ After-hours support for severity-1 failures is available on all working days, we
 
 For more information on the Stratum Platform and about Catalyze’s offerings, please visit:
 
-- Resources:resources.catalyze.io
-- Training Docs: training.catalyze.io
-- HL7 Docs and Mock API: hl7-docs.catalyze.io
-- FHIR Docs and Mock API: fhir.catalyze.io
-- Policy Docs: policy.catalyze.io
-- Engineering Blog: https://engineering.catalyze.io
-- Stratum FAQ: https://resources.catalyze.io/stratum/faq/
+- Resources: [resources.catalyze.io](//resources.catalyze.io)
+- Training Docs: [training.catalyze.io](//training.catalyze.io)
+- HL7 Docs and Mock API: [hl7-docs.catalyze.io](//hl7-docs.catalyze.io)
+- FHIR Docs and Mock API: [fhir.catalyze.io](//fhir.catalyze.io)
+- Policy Docs: [policy.catalyze.io](//policy.catalyze.io)
+- Engineering Blog: [engineering.catalyze.io](//engineering.catalyze.io)
+- Stratum FAQ: [resources.catalyze.io/stratum/faq/](//resources.catalyze.io/stratum/faq/)
