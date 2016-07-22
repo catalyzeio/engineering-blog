@@ -70,7 +70,7 @@ catalyze releases list code-1
 catalyze rollback code-1 EXAMPLE_RELEASES_NAME
 ```
 
-In a few moments the previous version of your application will be up and running. The rollback command does not manage any database migrations that have been applied. It is your responsibility to ensure your database is in a consistent and proper state when rolling back to an earlier version. Read the full releases and rollback guide [here](TODO-LINK-TO-THAT-POST).
+In a few moments the previous version of your application will be up and running. The rollback command does not manage any database migrations that have been applied. It is your responsibility to ensure your database is in a consistent and proper state when rolling back to an earlier version. Read the full release notes [here](https://engineering.catalyze.io/Stratum-2.1.0-Release-Notes.html) and the rollback guide [here](https://engineering.catalyze.io/minimize-production-down-time-due-to-failed-application-deployment.html).
 
 ## Multi-Factor Authentication (MFA)
 
