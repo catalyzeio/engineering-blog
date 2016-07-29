@@ -1,6 +1,5 @@
 source 'http://rubygems.org'
-
-gem 'middleman', '~> 3.3.7'
+gem 'middleman'
 gem 'middleman-blog'
 gem 'builder'
 gem 'redcarpet'
