@@ -14,13 +14,19 @@ Historically a database restore required a support ticket and a Catalyze enginee
 
 **Step 1:** Stop all code services that connect to the database. This step is important because open connections will cause conflicts when restoring the database from a backup.
 
-`$ catalyze services stop code-1`
+```
+$ catalyze services stop code-1
+```
 
 **Step 2:** List the latest database backups and download the appropriate one. For this example, I want to find the newest one.
 
-`$ catalyze db list database-1`
+```
+$ catalyze db list database-1
+```
 
-`$ catalyze db download database-1 <UUID FROM BACKUP LIST> ./recover.sql`
+```
+$ catalyze db download database-1 <UUID FROM BACKUP LIST> ./recover.sql
+```
 
 **Step 3:** Access the database console, connect to the postgres database, DROP the bad database, and CREATE an empty one.  It's important that you connect to the postgres database before running the DROP operation because PostgreSQL will throw an error when dropping a database with open connections.
 
@@ -34,31 +40,31 @@ $ catalyze console database-1
 
 **Step 4:** Import the downloaded SQL dump into the newly created database.
 
-`$ catalyze db import database-1 ./recover.sql`
+```
+$ catalyze db import database-1 ./recover.sql
+```
 
 **Step 5:** Restart any code services that were stopped in step 1.
 
-`$ catalyze redeploy code-1`
+```
+$ catalyze redeploy code-1
+```
 
 **Step 6:** Finally review the database import by connecting to the database via the console and accessing the app with your favorite browser.
 
 ## MySQL
 
-For those using MySQL steps 3 and 4 will be slightly different.
+For those using MySQL step 3 will be slightly different.
 
 **Step 3 (MySQL):** Access the database console, connect to the msql database, DROP the bad database, and CREATE an empty one.  It's important that you connect to the msql database before running the DROP operation because MySQL will throw an error when dropping a database with open connections.
 
 ```
-catalyze console database-1
->use mysql;
+$ catalyze console database-1
+> use mysql;
 > DROP DATABASE "catalyzeDB";
 > CREATE DATABASE "catalyzeDB";
 > exit
 ```
-
-**Step 4 (MySQL):** Import the downloaded SQL dump into the newly created database.
-
-`catalyze db import database-1 ./recover.sql`
 
 ## MongoDB
 
@@ -67,15 +73,17 @@ Finally let’s look at MongoDB. The major difference being that we need to conn
 **Step 3 (MongoDB):** Access the database console, connect to the catatlyzeDB database, DROP the bad database, and CREATE an empty one.  By default, the use command will create a new database if it doesn’t exist.
 
 ```
-catalyze console database-1
->use catalyzeDB
->db.dropDatabase()
->use catalyzeDB
+$ catalyze console database-1
+> use catalyzeDB
+> db.dropDatabase()
+> use catalyzeDB
 > exit
 ```
 
 **Step 4 (MongoDB):** Import the downloaded dump file into the newly created database.  This dump file is a compressed tarball.  I suggest using the name recover.tar.gz instead of recover.sql in step 2 for mongo databases.
 
-`catalyze db import database-1 ./recover.tar.gz`
+```
+$ catalyze db import database-1 ./recover.tar.gz
+```
 
-If you run into any issues while recovering a database, don’t hesitate to submit a ticket via the product dashboard, product.catalyze.io.
+If you run into any issues while recovering a database, don’t hesitate to submit a ticket via the [product dashboard](https://product.catalyze.io/stratum/).
