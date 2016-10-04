@@ -3,7 +3,7 @@ title: Stratum 2.2.0 Release Notes
 date: 2016-10-20
 author: raj
 author_full: Rajashekar Sundaramurthy
-author_alt: Co-author - Catalyze Architecture Team
+author_alt: Co-author - Vince Kenney
 tags: stratum, release, 2.2.0
 ---
 
