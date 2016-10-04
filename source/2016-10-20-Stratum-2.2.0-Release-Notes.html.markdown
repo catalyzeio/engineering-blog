@@ -39,9 +39,9 @@ With the introduction of updating service names and maintenance mode we took the
 The Catalyze CLI has been updated with improvements to log tailing, and the ability to rename services and environments. For a full list of CLI improvements visit the official CLI 3.3.0 release notes here.
 
 # Issues Resolved in 2.2.0
-Nanosecond granularity for log messages.  Contact Support if you want this added to your existing environment.
-CLI services list command prints internal DNS entries.  See the FAQ here: <link>
-Lockout for sign in failures is time boxed.
+- Nanosecond granularity for log messages (contact Support if you want this added to your existing environment).
+- CLI services list command prints internal DNS entries (see the FAQ here: <link>).
+- Lockout for sign in failures is time boxed.
 
 # Customer Support:
 - In order to tend to your support issue in a timely manner please submit your ticket through the Stratum dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
