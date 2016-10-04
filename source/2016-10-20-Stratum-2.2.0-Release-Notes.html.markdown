@@ -46,9 +46,9 @@ The Catalyze CLI has been updated with improvements to log tailing, and the abil
 # Customer Support:
 - In order to tend to your support issue in a timely manner please submit your ticket through the Stratum dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
 - **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
-Support hours are Monday through Friday 8:00 a.m. to 6:00 p.m. Central time.
-For Critical Problems (Severity-1) after Normal Support Hours:
-After-hours support for severity-1 failures is available on all working days, weekends and US public holidays
+- Support hours are Monday through Friday 8:00 a.m. to 6:00 p.m. Central time.
+- For Critical Problems (Severity-1) after Normal Support Hours:
+- After-hours support for severity-1 failures is available on all working days, weekends and US public holidays
 
 # Additional References:
 
