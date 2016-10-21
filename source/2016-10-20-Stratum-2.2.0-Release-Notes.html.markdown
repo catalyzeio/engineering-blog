@@ -1,0 +1,63 @@
+---
+title: Stratum 2.2.0 Release Notes
+date: 2016-10-20
+author: raj
+author_full: Rajashekar Sundaramurthy
+author_alt: Co-author - Vince Kenney
+tags: stratum, release, 2.2.0
+---
+
+Catalyze is pleased to announce the General Availability of Version 2.2.0 of Stratum, the industry leading HIPAA Compliant Platform As A Service. This release will be available to all Stratum customers on October 20th, 2016.
+
+# Highlights of Stratum V2.2.0
+
+#### Run Stratum on Any Cloud Account:
+Organizations can now run their Stratum environments on virtual machines on their own cloud account. The CLI and Dashboard remain the same, but the hardware is managed by the user.
+
+#### Flexible versions of PostgreSQL, Percona MySQL, MongoDB:
+The CLI access and backup strategies for Stratum databases has been enhanced to allow multiple versions of each database.  We’re excited to announce that we now support MongoDB 2.6, 3.0, and 3.2, PostgreSQL 9.4 and 9.5, and MySQL 5.6.  If you have further questions regarding specific database versions please contact support via the Stratum dashboard.
+
+#### Uptime Tracking:
+Key metrics to measure Redpoint reliability and uptime can now be tracked within a Catalyze-provided ELK stack. This will allow you to subscribe to alerts of your choosing to determine the health of your integrations at the same speed which Catalyze support receives the notifications. For Redpoint customers, please talk to your Catalyze representative to see if you qualify for an upgrade or for upgrading to the Uptime Tracking feature.
+
+#### NGINX Access Logs Available in Kibana:
+NGINX access logs are now shipped to the logging container by default for all new environments. To add this functionality to your existing Stratum environment(s) please contact support via the Stratum dashboard.
+
+#### Update “Service Names” Through the Dashboard:
+During environment creation new services are given generic “Service Names” by default. For example: a new code service would be labeled `code-1`. In this release we’re giving users the ability to change this name directly within the dashboard (as well as in the CLI). This allows users to assign a name that is more relevant to their application. See the image below for an example of how to update a service name.  Note:  Renaming a service will not change the Git URL or private network DNS entries, only the identifiers in the dashboard and CLI.
+![Update service name](/assets/img/posts/edit-service-name.gif)
+
+#### Maintenance Mode & Pages:
+Users can now place a service into maintenance mode via the Stratum Dashboard. This will send all public service requests to a static maintenance page alerting users that the current service is unavailable. As a benefit to developers the service will continue running and be accessible via the VPN. This will allow Stratum users to update their code services for private testing before opening up the new code to the public.
+![Update service name](/assets/img/posts/mm.gif)
+
+#### Redesigned Services View:
+With the introduction of updating service names and maintenance mode we took the opportunity to redesign the services view. Each code service type (service_proxy, code, database, cache, and default) now has tabbed navigation with appropriate content for that service.
+![Service view redesign](/assets/img/posts/services-redesign.png)
+
+#### Catalyze CLI Enhancements:
+The Catalyze CLI has been updated with improvements to log tailing, and the ability to rename services and environments. For a full list of CLI improvements visit the official CLI 3.3.0 release notes here.
+
+# Issues Resolved in 2.2.0
+- Nanosecond granularity for log messages (contact Support if you want this added to your existing environment).
+- CLI [services list](//resources.catalyze.io/paas/paas-cli-reference/#services-list) command prints internal DNS entries.
+- Lockout for sign in failures is time boxed.
+
+# Customer Support:
+- In order to tend to your support issue in a timely manner please submit your ticket through the Stratum dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
+- **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
+- Support hours are Monday through Friday 8:00 a.m. to 6:00 p.m. Central time.
+- For Critical Problems (Severity-1) after Normal Support Hours:
+- After-hours support for severity-1 failures is available on all working days, weekends and US public holidays
+
+# Additional References:
+
+For more information on the Stratum Platform and about Catalyze’s offerings, please visit:
+
+- Resources: [resources.catalyze.io](//resources.catalyze.io)
+- Training Docs: [training.catalyze.io](//training.catalyze.io)
+- HL7 Docs and Mock API: [hl7-docs.catalyze.io](//hl7-docs.catalyze.io)
+- FHIR Docs and Mock API: [fhir.catalyze.io](//fhir.catalyze.io)
+- Policy Docs: [policy.catalyze.io](//policy.catalyze.io)
+- Engineering Blog: [engineering.catalyze.io](//engineering.catalyze.io)
+- Stratum FAQ: [resources.catalyze.io/stratum/faq/](//resources.catalyze.io/stratum/faq/)
