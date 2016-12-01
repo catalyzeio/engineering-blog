@@ -1,0 +1,34 @@
+---
+title: Logging in a HIPAA compliant environment - Why? Part 1 of 3
+date: 2015-12-09
+author: mohan
+author_full: Mohan Balachandran
+author_alt:
+tags: Logging, Log management, Kibana, HIPAA, HITRUST, compliance, BAA
+---
+
+>  "I carry a log - yes. Is it funny to you? It is not to me. Behind all things are reasons. Reasons can even explain the absurd. .... Watch - and see what life teaches."
+
+> —  The Log Lady, from the TV show Twin Peaks
+
+
+##Logging - why log at all?
+
+If you want to take a very pragmatic view of it, then mainly for two reasons: Rrgulatory compliance with HIPAA and HITRUST and compliance with the BAA provided by the cloud hosting provider. Let's discuss each one of these in some detail.
+
+###Regulatory compliance with HIPAA and HITRUST
+
+Put simply, what HIPAA boils down to is that all access, both success and failures, to electronic protected health information (ePHI) should be monitored and logged and be accessible in the case of a breach. You should be able to go back and investigate what data was accessed, conduct forensics to try to figure out how that data was accessed in an unauthorized way and who may have been the person who accessed it or the entity that accessed it, and determine if/how data was altered. It's the who, what, when, and how of access that needs to be audited.
+
+Auditing is so important because the integrity and availability of data is so important in healthcare, and in HIPAA. When ePHI data changes is deleted or is accessed in some unauthorized way, that represents a breach to HIPAA and is something that needs to be tracked both proactively using alerting and monitoring, as well as reactively or retroactively to investigate when an unauthorized breach might have taken place.
+
+The types of logs should include system and network logs. This is basically what goes into syslog on a *nix box and, ideally, the server has detailed logging turned on. Next, any  application access and database access should be logged. The metadata (when, what, where, etc) associated with log data is extremely valuable. 
+
+
+### Cloud provider imposed requirements
+If you manage or touch ePHI (LINK), you will need to sign a BAA with either the hosting provider directly or with a PaaS solution like that provided by Catalyze. In the case where a direct relationship between the hosting provider and you exists, the BAA provided by the hosting provider (such as AWS, Azure or Rackspace) comes with specific provisions around logging. These provisions **must** be implemented otherwise the BAA can be considered to be invalid and thus, your solution could be in violation of HIPAA. These provisions can be very general or very specific. For example, some providers just include generic langauage such as *"You agree to comply with those security obligations identified in the General and Product Terms, and to implement, purchase, or maintain appropriate safeguards (including security appliances, services, and practices) as required for you to comply with the Security and Privacy rules as applicable to you"* and you are expected to intepret that and implement comprehensive logging, IDS and vulnerability scanning because without that trioka of solutions, you cannot expect to prove that you have taken *all appropriate safeguards* to secure your environment. Other providers are much more specific. For example, a large provider's BAA includes the following language - *"(ii) utilize the highest level of audit logging in connection with your use of all HIPAA Eligible Services, and (iii) maintain the maximum retention of logs in connection with your use of all HIPAA Eligible Services."* i.e. comprehensive logging and log retention is core to the BAA.
+
+ The Catalyze Platform as a Service (PaaS) takes care of all these requirements for you. We act as the buffer between you and the hosting provider in that we provide a standard BAA that satisfies requirements like the above (logging just being one of the many such required provisions) so you don't have to worry about it. 
+
+ In the following posts in this series, we will drill down more into the kinds of logs that need to be captured and why, what a sample HIPAA compliance dashboard would look like and some lessons that we have learnt over the years of managing logs across our customers. 
+
