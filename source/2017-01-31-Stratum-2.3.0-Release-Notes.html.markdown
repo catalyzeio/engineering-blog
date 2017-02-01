@@ -1,0 +1,48 @@
+---
+title: Stratum 2.3.0 Release Notes
+date: 2017-01-31
+author: vince
+author_full: Vince Kenney
+tags: stratum, release, 2.3.0
+---
+
+Catalyze is pleased to announce the General Availability of Version 2.3.0 of Stratum, the industry leading HIPAA Compliant Platform As A Service. This release will be available to all Stratum customers on February 1st, 2017.
+
+# Highlights of Stratum V2.3.0
+
+#### Improved Resiliency for Highly Available Services :
+Stratum has always made a best effort to schedule environment services in a way to minimize downtime due to failures in the public cloud. 2.3.0 will use public cloud resiliency features to schedule services for optimal distribution to minimize downtime due to failures in the public cloud.  Stratum leverages Availability Zones in AWS and Availability Sets in Azure, and treats these concepts as abstract “zones” for scheduling. Any service that enables this feature is spread across these zones in an even fashion. This ensures a higher degree of availability for services that scale. To enable this feature for particular services please contact Catalyze support. To fully understand this feature, please read this blog post. <link to blogpost>. Note: Workers are an exception to zone scheduling. Currently workers cannot be zone scheduled, though this will change in the future.
+
+#### Snapshot-based database backups:
+Currently we are only rolling this feature out for customers with large databases, but we plan to roll it out to everyone in the future. Currently we backup databases by directly querying an existing database for all of its data. Our new snapshot-based backup system will instead take a snapshot of the database volume and use that snapshot to backup the database, thus completely removing the need to query the database at all. Snapshots have minimal impact to IOPS/disk performance and as a result there will be minimal impact to the running database.
+
+#### Service level load-balancing for service proxies
+Previously for any HA configured service proxy on Stratum multiple cloud load-balancers were deployed for each instance of a the service proxy (i.e. each job). This will no longer be the case. A single load-balancer will now be deployed for the lifetime of a service proxy and will adjust its parameters as the service proxy changes. This means there will no longer be any DNS related downtime on service proxy related redeployments, as the load-balancer will only change its backend rules to adjust to the redeployment. Note: The transition to this feature will cause  similar DNS downtime as before. Thereafter no such down time will be incurred.
+
+#### In-place service redeployments:
+Previously on Stratum when a service was redeployed new capacity in our system had to be found for the service, which could take a few minutes in some cases. In-place service redeployments will enable redeployments of all services to happen much faster. Provided the memory and/or storage constraints of the service are not changed your service will be updated in place, rather than going through the process of being placed on a brand new host machine. Note: Workers are an exception and will not be redeployed in place, though this may change in this future.
+
+#### Environment Renaming
+Stratum users will now have access to rename their environments. To rename an environment simply click the pencil icon next to your environment name in the Stratum dashboard. An input will pop up giving you the option to rename the environment.
+
+# Issues Resolved in 2.3
+An issue in the CLI “catalyze worker rm” command prevented workers from being removed. All “catalyze worker” commands now work as expected.
+
+# Customer Support:
+- In order to tend to your support issue in a timely manner please submit your ticket through the Stratum dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
+- **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
+- Support hours are Monday through Friday 8:00 a.m. to 6:00 p.m. Central time.
+- For Critical Problems (Severity-1) after Normal Support Hours:
+- After-hours support for severity-1 failures is available on all working days, weekends and US public holidays
+
+# Additional References:
+
+For more information on the Stratum Platform and about Catalyze’s offerings, please visit:
+
+- Resources: [resources.catalyze.io](//resources.catalyze.io)
+- Training Docs: [training.catalyze.io](//training.catalyze.io)
+- HL7 Docs and Mock API: [hl7-docs.catalyze.io](//hl7-docs.catalyze.io)
+- FHIR Docs and Mock API: [fhir.catalyze.io](//fhir.catalyze.io)
+- Policy Docs: [policy.catalyze.io](//policy.catalyze.io)
+- Engineering Blog: [engineering.catalyze.io](//engineering.catalyze.io)
+- Stratum FAQ: [resources.catalyze.io/stratum/faq/](//resources.catalyze.io/stratum/faq/)
