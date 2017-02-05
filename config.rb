@@ -32,7 +32,7 @@ set :markdown, :fenced_code_blocks => true, :smartypants => true, :tables => tru
 activate :syntax, :wrap => true
 
 # XML
-set :url_root, 'https://engineering.catalyze.io'
+set :url_root, 'https://engineering.datica.com'
 activate :search_engine_sitemap
 page '/sitemap.xml', :layout => false
 
