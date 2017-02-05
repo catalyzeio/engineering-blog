@@ -1,3 +1,10 @@
+.page-title{
+    font-size: 32px;
+    font-weight: $font-weight-xlight;
+    color: $color_deep;
+    text-align: center;
+    margin: 0 0 100px 0;
+}
 a{
     color: $color_prime-alt;
     @include easing(200ms);
@@ -12,23 +19,20 @@ a{
     font-weight: $font-weight-bold;
 }
 .summary{
-    p{
+    ul,li,h1,h2,h3,h4,h5,p{
         line-height: 1.5;
         color: $color_talk;
         padding: 0 0 10px 0px;
     }
 }
-section{padding: 100px 30px;}
 .post{
-    &--featured{
-        background-color: $color_white;
-        border: 1px solid $color_border;
+    &--featured{;
         position: relative;
         .profile-picture{
             display: block;
             width: 100px;
             height: 100px;
-            border: 2px solid $color_white;
+            border: 2px solid $color_border;
             position: absolute;
             left: 0;
             right: 0;
@@ -37,13 +41,20 @@ section{padding: 100px 30px;}
             @include border-radius(50px);
         }
         // Main title
-        h1{
+        h1.title{
             margin: 55px 0 10px 0;
             font-size: 28px;
             font-weight: $font-weight-light;
             text-align: center;
             color: $color_deep-alt;
-            a{color: $color_deep-alt;}
+            a{
+                color: $color_deep-alt;
+                @include easing(200ms);
+                &:hover{
+                    @include easing(200ms);
+                    color: $color_prime-alt;
+                }
+            }
         }
         ul{
             text-align: center;
@@ -53,8 +64,45 @@ section{padding: 100px 30px;}
                 display: inline-block;
                 padding: 0 8px;
                 color: $color_talk-alt;
+                font-style: italic;
             }
         }
+    }
+    &--listing{
+        background-color: $color_white;
+        border: 1px solid $color_border;
+        position: relative;
+        margin: 0 0 50px 0;
+        h1.title{
+            margin: 0 0 10px 0;
+            font-size: 28px;
+            font-weight: $font-weight-light;
+            color: $color_deep-alt;
+            a{
+                color: $color_deep-alt;
+                @include easing(200ms);
+                &:hover{
+                    @include easing(200ms);
+                    color: $color_prime-alt;
+                }
+            }
+        }
+        ul{
+            margin: 0 0 20px 0;
+            li{
+                display: inline-block;
+                padding: 0 10px 0 0;
+                color: $color_talk-alt;
+                font-style: italic;
+            }
+        }
+    }
+}
+// Section styles
+section{padding: 65px 30px;}
+.section{
+    &--gray{
+        background-color: $color_light-alt;
     }
 }
 // .main-posts{

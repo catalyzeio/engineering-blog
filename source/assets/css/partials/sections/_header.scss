@@ -46,4 +46,13 @@
         font-size: 14px;
         @include border-radius(8px);
     }
+    @media all and (max-width: 530px){
+        .logo{
+            position: absolute;
+        }
+        .eng-blog-search{
+            width: 100%;
+            margin: 70px 0 0 0;
+        }
+    }
 }
