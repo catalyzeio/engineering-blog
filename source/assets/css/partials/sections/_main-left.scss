@@ -3,7 +3,7 @@
     @include border-radius(5px);
     margin: 20px;
     padding: 20px;
-    font-family: $f_sans;
+    font-family: $font_sans;
     color: $c_code;
     p{
         font-size: 14px;
@@ -16,7 +16,7 @@
     border: 1px solid darken($c_brand, 10%);
     @include border-radius(5px);
     h1{
-        font-family: $f_sans;
+        font-family: $font_sans;
         font-weight: 600;
         color: $c_brand;
         font-size: 14px;
@@ -30,7 +30,7 @@
         li{
             a{
                 display: block;
-                font-family: $f_sans;
+                font-family: $font_sans;
                 font-size: 14px;
                 text-decoration: none;
                 color: $c_text;

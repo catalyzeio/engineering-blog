@@ -1,22 +1,99 @@
-@import url('//fonts.googleapis.com/css?family=Source+Sans+Pro:400,200,200italic,300,300italic,400italic,600,600italic,700,700italic,900,900italic');
+@font-face{
+    src: url('../fonts/gt-america-ultralightitalic.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 100;
+    font-style: italic;
+}
+@font-face{
+    src: url('../fonts/gt-america-thinitalic.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face{
+    src: url('../fonts/gt-america-lightitalic.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 300;
+    font-style: italic;
+}
+@font-face{
+    src: url('../fonts/gt-america-regularitalic.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 400;
+    font-style: italic;
+}
+@font-face{
+    src: url('../fonts/gt-america-mediumitalic.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 500;
+    font-style: italic;
+}
+@font-face{
+    src: url('../fonts/gt-america-bolditalic.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 700;
+    font-style: italic;
+}
+@font-face{
+    src: url('../fonts/gt-america-blackitalic.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 900;
+    font-style: italic;
+}
+@font-face{
+    src: url('../fonts/gt-america-ultralight.woff') format('woff');
+    font-family: GT-America-ultra-light;
+    font-weight: 100;
+}
+@font-face{
+    src: url('../fonts/gt-america-thin.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 200;
+}
+@font-face{
+    src: url('../fonts/gt-america-light.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 300;
+}
+@font-face{
+    src: url('../fonts/gt-america-regular.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 400;
+}
+@font-face{
+    src: url('../fonts/gt-america-medium.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 500;
+}
+@font-face{
+    src: url('../fonts/gt-america-bold.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 700;
+}
+@font-face{
+    src: url('../fonts/gt-america-black.woff') format('woff');
+    font-family: GT-America;
+    font-weight: 900;
+}
 
-// Backup fonts
-$f_backup: -apple-system, 'Helvetica Neue', 'Helvetica', sans-serif;
+// Helpers
+$font_backup:  -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
+$font_sans:    GT-America, $font_backup;
+$font-serif:   Georgia, serif;
 
-$fw_xlight: 200;
-$fw_light: 300;
-$fw_reg: 400;
-$fw_semi: 600;
-$fw_bold: 700;
-$fw_ultra: 900;
-
-
-// Main font
-$f_sans: 'Source Sans Pro', $f_backup;
-$f_sans-mono: monospace;
+// Font Weights                      // GT America Mapping
+$font-weight-xlight:            100; // ultra light
+$font-weight-thin:              200; // thin
+$font-weight-light:             300; // light
+$font-weight-regular:           400; // regular
+$font-weight-mid:               500; // medium
+$font-weight-sem:               600; // N/A
+$font-weight-bold:              700; // bold
+$font-weight-heavy:             800; // N/A
+$font-weight-black:             900; // black
 
 body{
-    font-family: $f_sans;
-    font-size: 14px;
+    font-family: $font_sans;
+    font-size: 16px;
     a{text-decoration: none;}
 }

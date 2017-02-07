@@ -1,4 +1,4 @@
-# Catalyze Engineering Blog
+# Datica Engineering Blog
 
 ![status](https://codeship.com/projects/47c697e0-2408-0133-22b1-2235479d6523/status?branch=master)
 

@@ -1,86 +1,58 @@
 .main-header{
-    background-color: $c_brand;
-    padding: 20px;
+    padding: 30px;
+    // We need this because the menu button is absolute
+    position: relative;
     @extend .cf;
+    #menu{
+        display: none;
+        position: absolute;
+        right: 30px;
+        top: 36px;
+        background-color: $color_deep-alt;
+        color: $color_white;
+        font-weight: $font-weight-bold;
+        text-align: center;
+        padding: 10px;
+        @include border-radius(8px);
+    }
     .logo{
         float: left;
-        max-width: 130px;
-        position: relative;
-        span.eng-blog{
-            position: absolute;
-            font-size: 15px;
-            text-transform: uppercase;
-            color: rgba(255,255,255,0.4);
-            letter-spacing: 5px;
-            font-weight: 700;
-            top: 7px;
-            right: -160px;
-        }
-        img{max-width: 100%;height: auto;}
+        background: url('../img/datica-logo.svg');
+        display: block;
+        width: 120px;
+        height: 48px;
+        background-size: 120px 48px;
     }
     nav{
         float: right;
+        margin: 17px 0 0 0;
         a{
             display: inline-block;
-            margin: 0px 0px 0px 15px;
-            color: #fff;
-            @include easing(350ms);
-            font-size: 16px;
-            font-weight: 300;
-            &:hover{
-                @include easing(350ms);
-                color: rgba(255,255,255,0.7);
-            }
+            margin: 0 0 0 10px;
         }
-        a.cta{
-            font-size: 14px;
-            font-weight: 400;
-            @include border-radius(5px);
-            padding: 8px;
-            background: #fff;
-            background: -moz-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
-            background: -webkit-gradient(linear, left top, left bottom, color-stop(59%, #fff), color-stop(88%, #fafafa), color-stop(100%, #fff));
-            background: -webkit-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
-            background: -o-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
-            background: -ms-linear-gradient(top, #fff 59%, #fafafa 88%, #fff 100%);
-            background: linear-gradient(to bottom, #fff 59%, #fafafa 88%, #fff 100%);
-            color: $c_brand;
-            border: none;
-            -moz-box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
-            -webkit-box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
-            box-shadow: 0 0 0 1px rgba(0,0,0,0.1),0 1px 2px rgba(0,0,0,0.12),inset 0 -1px 1px rgba(0,0,0,0.1);
+        .cta{
+            font-weight: $font-weight-bold;
         }
     }
-    a#menu{
-        display: none;
-        position: absolute;
-        right: 20px;
-        top: 20px;
-        padding: 8px;
-        margin: 0px;
-        background-color: rgba(0,0,0,0.3);
-        text-transform: uppercase;
-        font-weight: 600;
-        color: #fff;
-        cursor: pointer;
-        @include border-radius(5px);
-    }
-}
-.search{
-    background-color: #E9EFF3;
-    input[type="text"]{
-        padding: 20px;
-        font-size: 30px;
-        font-family: $f_sans;
-        font-weight: 300;
-        background-color: #E9EFF3;
-        width: 100%;
+    .eng-blog-search{
+        margin: 5px 0 0 20px;
+        width: 220px;
         display: block;
-        border: 0px;
-        border-bottom: 2px solid transparent;
-        outline: none;
-        &:focus{
-            border-bottom: 2px solid $c_brand;
+        float: left;
+        padding: 10px;
+        border: 1px solid $color_border;
+        background-color: $color_white;
+        font-family: $font_sans;
+        font-size: 14px;
+        @include border-radius(8px);
+    }
+    @media all and (max-width: 530px){
+        .logo{
+            position: absolute;
+        }
+        .eng-blog-search{
+            width: 100%;
+            margin: 70px 0 0 0;
         }
     }
 }
