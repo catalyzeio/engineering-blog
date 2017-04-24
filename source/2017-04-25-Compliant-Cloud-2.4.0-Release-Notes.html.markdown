@@ -23,7 +23,7 @@ This new feature can completely eliminate the probability of any downtime during
 - Improvements to garbage collection on backup rotations
 - Fixed build stalling during nightly backups
 - Resiliency improvements to in-place redeployments
-- Added Kibana 3 logging container with log-archiver utility applications
+- Added Kibana 3 logging container
 - Improved targeting for `web` workers
 - Added nanosecond precision to Elastic Search
 - Added support in the CLI for log messages in older version of Elastic Search
@@ -31,7 +31,7 @@ This new feature can completely eliminate the probability of any downtime during
 # Customer Support:
 - In order to tend to your support issue in a timely manner please submit your ticket through the Compliant Cloud dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
 - **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
-- Support hours are Monday through Friday 8:00 a.m. to 6:00 p.m. Central time.
+- Support hours are Monday through Friday 9:00 a.m. to 5:00 p.m. Central time.
 - After-hours support for Severity-1 failures is available on all working days, weekends and US public holidays
 
 # Additional References:
