@@ -1,6 +1,6 @@
 ---
 title: Health Checks
-date: 2017-04-25
+date: 2017-04-24
 author: nathan
 author_full: Nathan Sweet
 tags: compliant cloud, health checks

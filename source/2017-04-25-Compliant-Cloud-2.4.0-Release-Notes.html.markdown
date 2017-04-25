@@ -16,7 +16,7 @@ tags: compliant cloud, release, 2.4.0
 # 2.4.0
 
 #### Configurable Health Checks
-This new feature can completely eliminate the probability of any downtime during a deployment. In short, a health check can be any number of things, but most commonly it will be a simple http route on an api that responds with a status code of “200”. We've written up a longer blog post for your perusal [here](TODO). To enable this feature customers may contact Datica support with their health checks. In the future we may allow customers to enable health checks for themselves.
+This new feature can completely eliminate the probability of any downtime during a deployment. In short, a health check can be any number of things, but most commonly it will be a simple http route on an api that responds with a status code of “200”. We've written up a longer blog post for your perusal [here](//engineering.datica.com/Health-Checks.html). To enable this feature customers may contact Datica support with their health checks. In the future we may allow customers to enable health checks for themselves.
 
 #### Resolved Issues & Service Improvements
 - Maintenance mode no longer shows up on service types that don't support that feature
