@@ -8,7 +8,7 @@ tags: compliant cloud, release, 2.4.0
 <div class="callout">
 <p>Today we're pleased to announce the general availability of Compliant Cloud 2.4.0. We've included the details below, but before we dive in here's a quick note on product releases going forward.</p>
 
-<p>In the past we've relied on a quarterly release schedule. While this release process can be common among software development teams it ended up being too restrictive for us. As such we've moved to a much faster release schedule. Now when we finish a feature we'll release it as soon as we can. If you have any questions, comments or concerns about product releases please reach out to <a href="mailto:hello@datica.com">hello@datica.com</a>.</p>
+<p>In the past we've relied on a quarterly release schedule. While this release process can be common among software development teams, it was too restrictive for us. So we've moved to a much more timely release schedule. Now when we finish a feature we'll release it as soon as we can. If you have any questions, comments or concerns about product releases please reach out to <a href="mailto:hello@datica.com">hello@datica.com</a>.</p>
 </div>
 
 #### On to the notes!
@@ -16,7 +16,7 @@ tags: compliant cloud, release, 2.4.0
 # 2.4.0
 
 #### Configurable Health Checks
-This new feature can completely eliminate the probability of any downtime during a deployment. In short a health check can be any number of things, but most commonly it will be a simple http route on an api that responds with a status code of “200”. We've written up a longer blog post for your perusal [here](TODO). To enable this feature customers may contact Datica support with their health checks. In the future we may allow customers to enable health checks for themselves.
+This new feature can completely eliminate the probability of any downtime during a deployment. In short, a health check can be any number of things, but most commonly it will be a simple http route on an api that responds with a status code of “200”. We've written up a longer blog post for your perusal [here](TODO). To enable this feature customers may contact Datica support with their health checks. In the future we may allow customers to enable health checks for themselves.
 
 #### Resolved Issues & Service Improvements
 - Maintenance mode no longer shows up on service types that don't support that feature
@@ -26,7 +26,6 @@ This new feature can completely eliminate the probability of any downtime during
 - Added Kibana 3 logging container
 - Improved targeting for `web` workers
 - Added nanosecond precision to Elastic Search
-- Added support in the CLI for log messages in older version of Elastic Search
 
 # Customer Support:
 - In order to tend to your support issue in a timely manner please submit your ticket through the Compliant Cloud dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
