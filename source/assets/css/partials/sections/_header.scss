@@ -1,5 +1,6 @@
 .main-header{
-    padding: 30px;
+    padding: 1rem 2rem;
+    background-color: $color_deep-alt;
     // We need this because the menu button is absolute
     position: relative;
     @extend .cf;
@@ -25,13 +26,12 @@
     }
     nav{
         float: right;
-        margin: 17px 0 0 0;
+        margin: 15px 0 0 0;
         a{
             display: inline-block;
-            margin: 0 0 0 10px;
-        }
-        .cta{
-            font-weight: $font-weight-bold;
+            margin: 0 0 0 1rem;
+            font-size: 14px;
+            color: $color_white;
         }
     }
     .eng-blog-search{
@@ -40,10 +40,11 @@
         display: block;
         float: left;
         padding: 10px;
-        border: 1px solid $color_border;
-        background-color: $color_white;
+        border: 0px;
+        background-color: lighten($color_deep-alt, 8%);
         font-family: $font_sans;
         font-size: 14px;
+        color: $color_talk-alt;
         @include border-radius(8px);
     }
     @media all and (max-width: 530px){
@@ -56,3 +57,7 @@
         }
     }
 }
+::-webkit-input-placeholder{color: rgba(255,255,255,0.5);}
+::-moz-placeholder{color: rgba(255,255,255,0.5);}
+:-ms-input-placeholder{color: rgba(255,255,255,0.5);}
+:-moz-placeholder{color: rgba(255,255,255,0.5);}
