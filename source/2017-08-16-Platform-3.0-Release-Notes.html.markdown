@@ -1,0 +1,53 @@
+---
+title: The Platform 3.0 Relase Notes
+date: 2017-08-16
+author: ryan
+author_full: Ryan Rich
+tags: compliant cloud, release, 3.0
+---
+
+The latest Platform release, 3.0, is arriving today — August 16th 2017. We’ve spent the better part of the past four months building features that we all believe are principal to our customers' success. The overarching theme is one of self-service, giving customers the ability to do more on their own. For an in-depth look at the release, see the notes below. Additionally, we've written a blog post that goes into even more detail [here](https://datica.com/blog/announcing-self-service-and-free-trials/).
+
+### New Features in 3.0
+**Sensu Checks On Disk Usage Graphing & Alerting:**
+Previous to the 3.0 release our support and developer operations team was required to be proactive about customer disk usage. They would have to manually contact customers on a case by case basis when that customer was approaching their disk usage limits. We realized that in order to make this easier, customers needed a way to see how much disk they were using so they could plan for growth and avoid outages accordingly. In order to eliminate this largely manual process we set up an automatic Sensu check and alert so that the customer can subscribe to this and make changes to their account accordingly.
+
+**Let's Encrypt:**
+One of the largest on-boarding pain points for new customers is the ability to install, manage and update SSL certificates on the platform. Now with Let's Encrypt support, all new environments will come preconfigured with a [Let's Encrypt](https://letsencrypt.org/) SSL certificate. Additionally, existing customers can change over to Let's Encrypt using the new CLI commands shipping with the Platform 3.0 release.
+
+**Dashboard Redesign:** We've completely redesigned the existing Platform dashboard. Improvements include an updated main navigation, improved environment list view for customer's with multiple environments, improved tabbed navigation within services, organization and account views, as well as much more.
+
+> Note: The following features require an upgraded contract. Please contact upgrade@datica.com to get your contact updated and receive these amazing new features!
+
+**Self-service Billing:** Customers now have the ability to manage their billing details in the dashboard. This includes setting default and backup methods of payment and viewing invoices.
+
+**Self-service Contracting:** Customers can now view and manage their contracts in the dashboard (this is for customers on new contracts and new pricing only).
+
+**Self-service On-boarding:** New customers can now sign up for a Datica account, input their billing details, spec out a new environment, and provision that environment entirely on their own.
+
+**Free Trials:** In addition to the new Self-service On-boarding feature, all [Developer](https://datica.com/pricing) accounts creating new environments will come with a 14-day free trial.
+
+**Self-service Scaling:** Existing customers with updated contracts will now be able to scale their environment code services entirely on their own.
+
+### Bug Fixes in 3.0
+- Database redeploys would sometimes fail to stop volumes
+- Greatly increased the efficiency of listing environments via the API
+- Race condition while checking the state of EBS Volumes
+- Better handling when multiple redeploy calls are sent in quick succession
+- Improvements to in-place redeploy logic
+- No longer an issue with the CLI logs command for a subset of logging containers
+- Better error message when backing up a non-running database
+- Better handling when redeploys fail in certain cases
+- Sending consistent notifications to users when they are added to or removed from groups
+- Many Dashboard fixes with the dashboard rewrite
+
+### Customer Support:
+- In order to tend to your support issue in a timely manner, please submit your ticket through the Platform dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
+- **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
+- Support hours are Monday through Friday 9:00 a.m. to 5:00 p.m. Central time.
+
+### Additional References:
+For more information on the Platform and Datica’s offerings, please visit:
+
+- Datica: [datica.com](//datica.com)
+- Resources: [resources.datica.com](//resources.datica.com)

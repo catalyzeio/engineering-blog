@@ -36,8 +36,10 @@ To take advantage of these new features upgrade your Catalyze CLI and visit the 
 
 To find out more information and to learn how to take advantage of some of these great features, be sure to check out the FAQ articles, guides, and documentation we've published below.
 
-[Database Import/Export](//resources.catalyze.io/paas/paas-faq/import-export/)
+[Database Import](https://resources.datica.com/compliant-cloud/articles/cli-database-import/)
 
-[Environment Metrics](//resources.catalyze.io/paas/paas-faq/environment-metrics/)
+[Database Export](https://resources.datica.com/compliant-cloud/articles/cli-database-export/)
 
-[Secure Console](//resources.catalyze.io/paas/paas-faq/secure-console/)
+[Environment Metrics](https://resources.datica.com/compliant-cloud/articles/environment-metrics/)
+
+[Secure Console](https://resources.datica.com/compliant-cloud/articles/console/)
