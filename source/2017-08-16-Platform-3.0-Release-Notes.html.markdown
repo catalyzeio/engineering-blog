@@ -10,10 +10,10 @@ The latest Platform release, 3.0, is arriving today — August 16th 2017. We’v
 
 ### New Features in 3.0
 **Sensu Checks On Disk Usage Graphing & Alerting:**
-Previous to the 3.0 release our support and developer operations team was required to be proactive about customer disk usage. They would have to manually contact customers on a case by case basis when that customer was approaching their disk usage limits. We realized that in order to make this easier, customers needed a way to see how much disk they were using so they could plan for growth and avoid outages accordingly. In order to eliminate this largely manual process we set up an automatic Sensu check and alert so that the customer can subscribe to this and make changes to their account accordingly.
+Previous to the 3.0 release our support and developer operations team was required to be proactive about customer disk usage. They would have to manually contact customers on a case by case basis when that customer was approaching their disk usage limits. We realized that in order to make this easier, customers needed a way to see how much disk they were using so they could plan for growth and avoid outages accordingly. In order to eliminate this largely manual process we set up an automatic Sensu check and alert so that the customer can subscribe to this and make changes to their account accordingly. This feature will be rolled out automatically for new customers. Existing customers will recieve the update on a rolling basis.
 
 **Let's Encrypt:**
-One of the largest on-boarding pain points for new customers is the ability to install, manage and update SSL certificates on the platform. Now with Let's Encrypt support, all new environments will come preconfigured with a [Let's Encrypt](https://letsencrypt.org/) SSL certificate. Additionally, existing customers can change over to Let's Encrypt using the new CLI commands shipping with the Platform 3.0 release.
+One of the largest on-boarding pain points for new customers is the ability to install, manage, and update SSL certificates on the platform. Now with Let's Encrypt support, all new environments will come preconfigured with a [Let's Encrypt](https://letsencrypt.org/) SSL certificate (customers will still be required to assign a site using the [`datica sites`](https://resources.datica.com/compliant-cloud/cli-reference/#sites) command). Additionally, existing customers can change over to Let's Encrypt using the new CLI commands shipping with the Platform 3.0 release.
 
 **Dashboard Redesign:** We've completely redesigned the existing Platform dashboard. Improvements include an updated main navigation, improved environment list view for customer's with multiple environments, improved tabbed navigation within services, organization and account views, as well as much more.
 
@@ -35,7 +35,6 @@ One of the largest on-boarding pain points for new customers is the ability to i
 - Race condition while checking the state of EBS Volumes
 - Better handling when multiple redeploy calls are sent in quick succession
 - Improvements to in-place redeploy logic
-- No longer an issue with the CLI logs command for a subset of logging containers
 - Better error message when backing up a non-running database
 - Better handling when redeploys fail in certain cases
 - Sending consistent notifications to users when they are added to or removed from groups
