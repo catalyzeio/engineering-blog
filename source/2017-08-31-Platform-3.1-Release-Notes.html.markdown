@@ -20,7 +20,7 @@ The latest Platform release, 3.1, is arriving today — August 31 2017. In the l
 - _Dashboard:_ When no releases are present the dashboard was showing an error, it now returns an empty list
 - _CLI:_ User invites now have the correct accept invite link
 - _CLI:_ Fixed indexing error in the "init" command
-- _Platform:_ Failed in place redeploys now update the ELB properly with new host locations
+- _Platform:_ Failed in-place redeploys now update the ELB properly with new host locations
 
 ### Customer Support:
 - In order to tend to your support issue in a timely manner, please submit your ticket through the Platform dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable metadata to the support staff, which allow them to triage the issue much quicker.
