@@ -16,7 +16,7 @@ All Platform customers have the ability to add a VPN appliance to their account.
 Datica now provides ACL (Access Control Lists) groups that give you more control over access to your products, services, and environments. These new groups are composed of various ACL rules. Owners and admins can add individual users within their organizations to these groups for finer access control. To learn more about ACL groups [go here](//resources.datica.com/compliant-cloud/articles/concepts/acl-groups/).
 
 # Customer Support:
-- In order to tend to your support issue in a timely manner please submit your ticket through the Compliant Cloud dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff which allow them to triage the issue much quicker.
+- In order to tend to your support issue in a timely manner please submit your ticket through the Compliant Cloud dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable metadata to the support staff which allow them to triage the issue much quicker.
 - **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
 - Support hours are Monday through Friday 9:00 a.m. to 5:00 p.m. Central time.
 - After-hours support for Severity-1 failures is available on all working days, weekends and US public holidays
