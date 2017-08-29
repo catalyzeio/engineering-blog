@@ -41,7 +41,7 @@ activate :blog do |blog|
   blog.permalink = '{title}.html'
   blog.sources = '{year}-{month}-{day}-{title}.html'
   blog.layout = 'layout_blog'
-  blog.summary_length = 500
+  blog.summary_length = 250
   blog.tag_template = 'tag.html'
   blog.calendar_template = 'calendar.html'
 end

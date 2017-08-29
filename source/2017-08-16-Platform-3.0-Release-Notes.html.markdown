@@ -1,5 +1,5 @@
 ---
-title: The Platform 3.0 Relase Notes
+title: The Platform 3.0 Release Notes
 date: 2017-08-16
 author: ryan
 author_full: Ryan Rich

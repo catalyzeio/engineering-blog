@@ -1,0 +1,31 @@
+---
+title: The Platform 3.1 Release Notes
+date: 2017-08-31
+author: ryan
+author_full: Ryan Rich
+tags: platform, cli, release, 3.1
+---
+The latest Platform release, 3.1, is arriving today — August 31 2017. In the last release, we announced self-service on-boarding and scaling, among other things. In this release we've done a tremendous amount of cleanup work. Additionally, we have several new features for new and existing customers. See the full release notes below.
+
+### New Features
+- Platform metrics are now available in the dashboard again. We appreciate the patience while we got this in order.
+- New customers and existing customers with amendments to their contracts can increase the scale of volumes associated with their services. These services include Databases and Caches. See the gif below on how to do this:
+- New customers and existing customers with amendments to their contracts have the ability to add Code, Database, Queue, and Cache services to their existing environments.
+- We've implemented a new Sensu check for SSL certificates. This new check will look for certs expiring within 14 days. If a certificate _is_ expiring within the next 14 days your monitoring dashboard will show a critical alert. Customers will receive this new update after a service proxy redeploy.
+
+### Bug Fixes
+- _Dashboard:_ Improved error handling throughout the dashboard
+- _Dashboard:_ Added missing utility services to the billing sidebar during on-boarding
+- _Dashboard:_ Volume sizing on HA database services now displays properly during on-boarding
+- _Dashboard:_ When no releases are present the dashboard was showing an error, it now returns an empty list
+- _CLI:_ User invites now have the correct accept invite link
+- _CLI:_ "3" is not a number bug "init" command is fixed in the CLI
+- _Platform:_ Failed in place redeploys now update the ELB properly with new host locations
+
+### Customer Support:
+- In order to tend to your support issue in a timely manner, please submit your ticket through the Platform dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable meta data to the support staff, which allow them to triage the issue much quicker.
+- **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
+- Support hours are Monday through Friday 9:00 a.m. to 5:00 p.m. CST.
+
+### Additional References:
+For more information on the Platform and Datica’s offerings, please visit: Datica: [datica.com](//datica.com) and Resources: [resources.datica.com](//resources.datica.com).
