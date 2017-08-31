@@ -54,6 +54,7 @@ a{
         color: $color_talk;
         padding: 0 0 10px 0px;
     }
+    ul,ol{list-style: none;}
 }
 .post{
     &--featured{;
@@ -86,17 +87,6 @@ a{
                 }
             }
         }
-        ul{
-            text-align: center;
-            margin: 0 0 20px 0;
-            li{
-                text-align: center;
-                display: inline-block;
-                padding: 0 2px;
-                color: $color_talk-alt;
-                font-style: italic;
-            }
-        }
     }
     &--listing{
         background-color: $color_white;
@@ -110,6 +100,7 @@ a{
             font-size: 28px;
             font-weight: $font-weight-light;
             color: $color_deep-alt;
+            text-align: center;
             a{
                 color: $color_deep-alt;
                 @include easing(200ms);
@@ -117,15 +108,6 @@ a{
                     @include easing(200ms);
                     color: $color_prime-alt;
                 }
-            }
-        }
-        ul{
-            margin: 0 0 20px 0;
-            li{
-                display: inline-block;
-                padding: 0 10px 0 0;
-                color: $color_talk-alt;
-                font-style: italic;
             }
         }
     }
@@ -207,24 +189,6 @@ $margin-bottom: 1rem;
         padding: 0 0 0 10px;
         border-left: 2px solid $color_border;
     }
-    ul{
-        text-align: left;
-        list-style-type: disc;
-        color: $color_talk;
-        margin-bottom: $margin-bottom;
-        font-style: normal;
-        li{
-            list-style-type: disc;
-            text-align: left;
-            display: block;
-            margin: 0 0 10px 0;
-            margin-bottom: $margin-bottom;
-            font-style: normal;
-            padding: 0 0 10px 0;
-            border-bottom: 1px solid $color_border;
-            &:last-of-type{margin: 0;border: 0;}
-        }
-    }
 }
 .button-more{
     display: inline-block;
@@ -247,4 +211,31 @@ $margin-bottom: 1rem;
             margin: 0;
         }
     }
+}
+
+.author-information{
+  ul{
+    padding: 0;
+    margin: 1rem 0;
+    text-align: center;
+    li{
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      text-align: center;
+      display: inline-block;
+      color: $color_talk-alt;
+      span{
+        font-style: italic;
+      }
+    }
+  }
+}
+
+ul{
+  li{
+    img{
+      margin: 1rem 0 0 0;
+    }
+  }
 }
