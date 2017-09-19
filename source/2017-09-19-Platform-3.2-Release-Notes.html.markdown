@@ -15,7 +15,7 @@ New customers and those with amendments to their contracts can now receive payme
 New customers and those with amendments to their contracts now have the ability to create and scale object storage buckets directly in the Platform dashboard. This feature is currently only available to the "Admin" group. To utilize this feature navigate to your organization in the left side navigation. Find the "Object Storage" tab. Once inside of the Object Storage tab you'll have the ability to increase your bucket size.
 
 ##### Hostnames Correlate to Service Labels
-Customers will now see that Hostnames and Service Labels match. This helps in a number of different ways during reporting. (note: customers are required to redeploy the service in order to see the correlation).
+Customers will now see that Service labels are visible in Kibana's 'host' field. (note: customers must redeploy a service before its label will be displayed in Kibana).
 
 ##### Organization Audit Logs
 The dashboard now includes an organization audit log feature. You can see which organization actions your users are conducting (note: this is currently only available to admins).
