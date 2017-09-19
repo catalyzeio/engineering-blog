@@ -45,3 +45,9 @@ activate :blog do |blog|
   blog.tag_template = 'tag.html'
   blog.calendar_template = 'calendar.html'
 end
+
+helpers do
+    def secure_random
+        SecureRandom.urlsafe_base64
+    end
+end
