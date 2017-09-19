@@ -1,0 +1,35 @@
+---
+title: The Platform 3.2 Release Notes
+date: 2017-09-19
+author: ryan
+author_full: Ryan Rich
+tags: platform, cli, release, 3.1
+---
+The latest Platform release, 3.2, is arriving Thursday — September 21 2017. In the previous release, we introduced self-service environment creation and service volume scaling among other features. In this release we're continuing with the self-service theme. Read the full release notes below.
+
+## New Features
+##### Receipts By Email
+New customers and those with amendments to their contracts can now receive payment receipts by email. To enable this feature navigate to your organization. On the "Information" tab you'll see an input for "Billing Email". Enter the email you wish to receive receipts (note: this feature is only for customers with standard contracts that pay by credit card).
+
+##### Self-service Object Storage Creation
+New customers and those with amendments to their contracts now have the ability to create and scale object storage buckets directly in the Platform dashboard. This feature is currently only available to the "Admin" group.
+
+##### Hostnames Correlate to Service Labels
+Customers will now see that Hostnames and Service Labels match. This helps in a number of different ways during reporting. (note: customers are required to redeploy the service in order to see the correlation).
+
+##### Organization Audit Logs
+The dashboard now includes an organization audit log feature. You can see which organization actions your users are conducting (note: this is currently only available to admins).
+
+## Bug Fixes
+- _Dashboard:_ Customers with MFA enabled no longer have to reload the dashboard in order to their environments list
+- _Dashboard:_ Services labels are now correctly displayed (with proper capitalization)
+- _Dashboard:_ Organization name is now updated in real time when changed
+- _Dashboard:_ Fixed the environment creation issue where EBS volumes were not provisioned properly
+
+### Customer Support:
+- In order to tend to your support issue in a timely manner, please submit your ticket through the Platform dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable metadata to the support staff, which allow them to triage the issue much quicker.
+- **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
+- Support hours are Monday through Friday 9:00 a.m. to 5:00 p.m. CST.
+
+### Additional References:
+For more information on the Platform and Datica’s offerings, please visit: Datica: [datica.com](//datica.com) and Resources: [resources.datica.com](//resources.datica.com).
