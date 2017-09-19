@@ -9,10 +9,10 @@ The latest Platform release, 3.2, is arriving Thursday — September 21 2017. In
 
 ## New Features
 ##### Receipts By Email
-New customers and those with amendments to their contracts can now receive payment receipts by email. To enable this feature navigate to your organization. On the "Information" tab you'll see an input for "Billing Email". Enter the email you wish to receive receipts (note: this feature is only for customers with standard contracts that pay by credit card).
+New customers and those with amendments to their contracts can now receive payment receipts by email. To enable this feature navigate to your organization. On the "Information" tab you'll see an input for "Billing Email". Enter the email you wish to receive receipts (note: this feature is only available to self-service customers paying by credit card)..
 
 ##### Self-service Object Storage Creation
-New customers and those with amendments to their contracts now have the ability to create and scale object storage buckets directly in the Platform dashboard. This feature is currently only available to the "Admin" group.
+New customers and those with amendments to their contracts now have the ability to create and scale object storage buckets directly in the Platform dashboard. This feature is currently only available to the "Admin" group. To utilize this feature navigate to your organization in the left side navigation. Find the "Object Storage" tab. Once inside of the Object Storage tab you'll have the ability to increase your bucket size.
 
 ##### Hostnames Correlate to Service Labels
 Customers will now see that Hostnames and Service Labels match. This helps in a number of different ways during reporting. (note: customers are required to redeploy the service in order to see the correlation).
