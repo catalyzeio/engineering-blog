@@ -21,10 +21,10 @@ Customers will now see that Service labels are visible in Kibana's 'host' field.
 The dashboard now includes an organization audit log feature. You can see which organization actions your users are conducting (note: this is currently only available to admins).
 
 ## Bug Fixes
-- _Dashboard:_ Customers with MFA enabled no longer have to reload the dashboard in order to their environments list
-- _Dashboard:_ Services labels are now correctly displayed (with proper capitalization)
+- _Dashboard:_ Customers with MFA enabled no longer have to reload the dashboard in order to see their environments list
+- _Dashboard:_ Service labels are now always being displayed with correct capitalization
 - _Dashboard:_ Organization name is now updated in real time when changed
-- _Dashboard:_ Fixed the environment creation issue where EBS volumes were not provisioned properly
+- _Platform:_ More robust environment creation logic
 
 ### Customer Support:
 - In order to tend to your support issue in a timely manner, please submit your ticket through the Platform dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable metadata to the support staff, which allow them to triage the issue much quicker.
