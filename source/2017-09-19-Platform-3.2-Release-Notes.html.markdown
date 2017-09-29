@@ -3,7 +3,7 @@ title: The Platform 3.2 Release Notes
 date: 2017-09-19
 author: ryan
 author_full: Ryan Rich
-tags: platform, cli, release, 3.1
+tags: platform, cli, release, 3.2
 ---
 The latest Platform release, 3.2, is arriving Thursday — September 21 2017. In the previous release, we introduced self-service environment creation and service volume scaling among other features. In this release we're continuing with the self-service theme. Read the full release notes below.
 

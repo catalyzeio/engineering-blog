@@ -1,0 +1,30 @@
+---
+title: The Platform 3.3 Release Notes
+date: 2017-09-29
+author: ryan
+author_full: Ryan Rich
+tags: platform, cli, release, 3.3
+---
+The latest Platform release, 3.3, is arriving Monday evening (8PM - 10PM CST) — October 2 2017. In the previous release, we introduced self-service object storage creation, logging improvements and several bug fixes. In this release we're excited to bring you account upgrades, service file editing, and more bug fixes. Read the full release notes below.
+
+## New Features
+##### Account Upgrades
+Customers now have the ability to upgrade their account from Developer to Growth directly in the dashboard. More information on our tiered pricing can be [found here](https://datica.com/pricing).
+
+##### View & Edit Service Files
+We're excited to announce that customers now have the ability to view and edit service files directly in the dashboard. This feature gives users complete, self-service control to configure their services on the Datica platform. We'll be publishing resource documentation on this feature Monday evening, so please keep an eye on [resources.datica.com](https://resources.datica.com/) for more information.
+
+## Bug Fixes
+- _CLI:_ Improved output of the CLI "vars set" command
+- _Dashboard:_ Performance improvements to the way we load environment lists
+_ _Dashboard:_ Improved workflow for accepting organization invites
+- _Monitoring:_ Improved alerts for Redis
+- _Platform:_ Improved environment disk check alerting
+
+### Customer Support:
+- In order to tend to your support issue in a timely manner, please submit your ticket through the Platform dashboard by clicking on the “Contact Support” button located in the footer of the Environment UI. This provides valuable metadata to the support staff, which allow them to triage the issue much quicker.
+- **Our Support Policies:** Support is provided in English from our offices in Madison, WI.
+- Support hours are Monday through Friday 9:00 a.m. to 5:00 p.m. CST.
+
+### Additional References:
+For more information on the Platform and Datica’s offerings, please visit: Datica: [datica.com](//datica.com) and Resources: [resources.datica.com](//resources.datica.com).
